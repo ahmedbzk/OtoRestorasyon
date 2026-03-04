@@ -1,0 +1,152 @@
+<header class="absolute top-0 left-0 w-full z-[100] py-4 border-b border-white/10 transition-all duration-500 hover:bg-black/60 bg-black/20">
+  <nav class="container mx-auto px-6 md:px-12 flex justify-between items-center text-white">
+    
+    <div class="flex-shrink-0">
+      <img src="assets/logo2.png" alt="Logo" class="h-20 md:h-24 w-auto object-contain transition-transform hover:scale-105 cursor-pointer" routerLink="/home">
+    </div>
+
+    <ul class="hidden lg:flex gap-12 items-center font-bold text-[13px] tracking-[0.15em] uppercase">
+      <li class="flex items-center gap-2 hover:text-blue-400 cursor-pointer transition-all duration-300">
+         ANASAYFA<lucide-icon name="home" size="25"></lucide-icon>
+      </li>
+      
+     <li class="group relative py-4">
+  <a class="flex items-center gap-2 hover:text-[#00adef] cursor-pointer transition-all uppercase font-bold tracking-widest text-xs">
+    KURUMSAL <lucide-icon name="chevron-down" size="20"></lucide-icon>
+  </a>
+  
+  <div class="absolute top-full left-0 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[150]">
+    <ul class="bg-black/95 w-64 py-4 border border-white/10 shadow-2xl rounded-sm">
+      
+      <li>
+        <a routerLink="/corporate/about" 
+           routerLinkActive="text-[#00adef]"
+           class="px-8 py-3 block hover:bg-white/10 text-[11px] font-semibold transition uppercase cursor-pointer">
+           HAKKIMIZDA
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/corporate/media" 
+           routerLinkActive="text-[#00adef]"
+           class="px-8 py-3 block hover:bg-white/10 text-[11px] font-semibold transition uppercase cursor-pointer">
+           MEDYA İÇERİKLERİ
+        </a>
+      </li>
+
+      <li>
+        <a routerLink="/corporate/sss" 
+           routerLinkActive="text-[#00adef]"
+           class="px-8 py-3 block hover:bg-white/10 text-[11px] font-semibold transition uppercase cursor-pointer">
+           S.S.S
+        </a>
+      </li>
+
+    </ul>
+  </div>
+</li>
+
+      <li class="flex items-center gap-2 hover:text-blue-400 cursor-pointer transition-all ">
+         HİZMETLERİMİZ<lucide-icon name="car" size="30"></lucide-icon>
+      </li>
+      <li class="flex items-center gap-2 hover:text-blue-400 cursor-pointer transition-all">
+         YEDEK PARÇALAR<lucide-icon name="wrench" size="25"></lucide-icon>
+      </li>
+      <li class="flex items-center gap-2 hover:text-blue-400 cursor-pointer transition-all">
+         İLETİŞİM<lucide-icon name="phone-call" size="25"></lucide-icon>
+      </li>
+    </ul>
+
+    <div class="flex items-center gap-8">
+      <div class="hidden md:block relative group py-4">
+        <div class="hidden md:block relative group py-4">
+        <div class="flex items-center gap-3 border-r border-white/20 pr-6 cursor-pointer group">
+          <img [src]="'assets/flags/' + (currentLang === 'TR' ? 'turkey' : currentLang === 'BG' ? 'bulgaria' : currentLang === 'RO' ? 'romania' : 'england') + '.png'" 
+               class="w-8 h-8 rounded-full object-contain border-2 border-white/10 shadow-lg group-hover:scale-110 transition-transform">
+          <span class="text-[12px] font-black tracking-tighter">{{ currentLang }}</span>
+        </div>
+        
+        <div class="absolute top-full left-1/2 -translate-x-1/2 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[150]">
+          <ul class="bg-black/95 w-44 py-2 border border-white/10 shadow-2xl ">
+            <li><button (click)="setLanguage('TR')" class="flex items-center gap-4 px-6 py-3 hover:bg-white/10 w-full text-left transition text-[11px] font-bold">
+              <img src="assets/flags/turkey.png" class="w-6 h-6"> TR</button></li>
+            <li><button (click)="setLanguage('BG')" class="flex items-center gap-4 px-6 py-3 hover:bg-white/10 w-full text-left transition text-[11px] font-bold">
+              <img src="assets/flags/bulgaria.png" class="w-6 h-6"> BG</button></li>
+            <li><button (click)="setLanguage('RO')" class="flex items-center gap-4 px-6 py-3 hover:bg-white/10 w-full text-left transition text-[11px] font-bold">
+              <img src="assets/flags/romania.png" class="w-6 h-6"> RO</button></li>
+            <li><button (click)="setLanguage('EN')" class="flex items-center gap-4 px-6 py-3 hover:bg-white/10 w-full text-left transition text-[11px] font-bold">
+              <img src="assets/flags/england.png" class="w-6 h-6"> EN</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+      <button (click)="toggleTheme()" class="hover:text-blue-400 transition-colors">
+        <lucide-icon [name]="isDarkMode ? 'sun' : 'moon'" size="22"></lucide-icon>
+      </button>
+
+      <button (click)="isMenuOpen = true" class="lg:hidden text-white p-2">
+        <lucide-icon name="menu" size="32"></lucide-icon>
+      </button>
+    </div>
+  </nav>
+
+  <div *ngIf="isMenuOpen" class="fixed inset-0 z-[1001] flex justify-start">
+    <div (click)="isMenuOpen = false" class="absolute inset-0 bg-black/60 backdrop-blur-sm animate-fade-in"></div>
+    <div class="relative w-[80%] h-full bg-base-100 text-base-content shadow-2xl flex flex-col transform transition-transform duration-300 ease-out animate-slide-in">
+      
+      <div class="flex justify-between items-center p-8 border-b border-base-200">
+        <img src="assets/logo.png" alt="Logo" class="h-10 w-auto object-contain">
+        <button (click)="isMenuOpen = false" class="btn btn-ghost btn-circle">
+          <lucide-icon name="x" size="24"></lucide-icon>
+        </button>
+      </div>
+
+      <ul class="flex-1 p-8 space-y-6 font-light tracking-[0.2em] uppercase text-xs overflow-y-auto">
+        <li class="flex items-center gap-3 border-b border-base-200 py-4">
+          <lucide-icon name="home" size="16"></lucide-icon> <a (click)="isMenuOpen = false">ANASAYFA</a>
+        </li>
+        <li>
+          <details class="group">
+            <summary class="flex justify-between items-center py-4 border-b border-base-200 cursor-pointer list-none">
+              KURUMSAL <lucide-icon name="chevron-right" size="14" class="group-open:rotate-90 transition-transform"></lucide-icon>
+            </summary>
+            <ul class="pl-8 pt-4 space-y-4 opacity-70">
+              <li><a (click)="isMenuOpen = false">HAKKIMIZDA</a></li>
+              <li><a (click)="isMenuOpen = false">MEDYA İÇERİKLERİMİZ</a></li>
+              <li><a (click)="isMenuOpen = false">S.S.S</a></li>
+            </ul>
+          </details>
+        </li>
+        <li class="flex items-center gap-3 border-b border-base-200 py-4">
+          <lucide-icon name="car" size="16"></lucide-icon> <a (click)="isMenuOpen = false">Hizmetlerimiz</a>
+        </li>
+        <li class="flex items-center gap-3 border-b border-base-200 py-4">
+          <lucide-icon name="settings" size="16"></lucide-icon> <a (click)="isMenuOpen = false">Yedek Parçalar</a>
+        </li>
+        <li class="flex items-center gap-3 border-b border-base-200 py-4">
+          <lucide-icon name="phone-call" size="16"></lucide-icon> <a (click)="isMenuOpen = false">İLETİŞİM</a>
+        </li>
+      </ul>
+
+      <div class="p-8 bg-base-200/50 space-y-8 mt-auto border-t border-base-300">
+        <div class="flex justify-between items-center">
+          <span class="text-[10px] font-bold tracking-[0.2em] opacity-50">GÖRÜNÜM</span>
+          <button (click)="toggleTheme()" class="btn btn-circle btn-sm shadow-md bg-base-100 border-none">
+            <lucide-icon [name]="isDarkMode ? 'sun' : 'moon'" size="16"></lucide-icon>
+          </button>
+        </div>
+        <div class="flex justify-between items-center">
+          <span class="text-[10px] font-bold tracking-[0.2em] opacity-50 uppercase">Dil Seçimi</span>
+          <div class="flex gap-4">
+            <button (click)="setLanguage('TR')" [ngClass]="{'ring-2 ring-blue-500 rounded-full p-1': currentLang === 'TR'}">
+              <img src="assets/flags/turkey.png" class="w-8 h-8 rounded-full">
+            </button>
+            <button (click)="setLanguage('EN')" [ngClass]="{'ring-2 ring-blue-500 rounded-full p-1': currentLang === 'EN'}" class="opacity-40 hover:opacity-100">
+              <img src="assets/flags/england.png" class="w-8 h-8 rounded-full">
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
