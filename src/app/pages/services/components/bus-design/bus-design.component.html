@@ -1,0 +1,80 @@
+<section class="bg-white min-h-screen py-10"> <div class="container mx-auto px-6 max-w-7xl"> 
+
+    <div class="flex flex-col lg:flex-row gap-10"> <div class="w-full lg:w-1/4">
+        <div class="sticky top-20 space-y-2"> <h3 class="text-[9px] font-bold text-gray-500 tracking-[0.3em] mb-4 uppercase pl-4">HİZMET KATEGORİLERİ</h3>
+          
+          <button *ngFor="let s of services"
+                  (click)="selectCategory(s)"
+                  [class.active-category]="selectedService.id === s.id"
+                  class="w-full text-left p-4 border-l-4 border-transparent bg-gray-100/70 hover:bg-gray-200/90 transition-all duration-300 group rounded-r-xl shadow-inner-sm">
+            <span class="block text-xs font-black tracking-widest uppercase transition-colors group-hover:text-[#00adef] text-gray-600"> {{ s.title }}
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div class="w-full lg:w-3/4 animate-fade-in">
+        
+        <div class="mb-8 border-b border-gray-100 pb-6">
+          <h2 class="text-2xl font-black text-black tracking-tighter uppercase mb-2 leading-none">
+            {{ selectedService.title }}
+          </h2>
+          <p class="text-[#00adef] font-bold text-base tracking-wide italic"> {{ selectedService.subtitle }}
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-12"> <div class="space-y-6">
+            <p class="text-gray-600 leading-relaxed text-sm font-medium"> {{ selectedService.description }}
+            </p>
+            
+            <div>
+              <h4 class="text-black font-black text-[10px] uppercase tracking-widest mb-3">ÖNE ÇIKANLAR</h4>
+              <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <li *ngFor="let feature of selectedService.features" class="flex items-center gap-2 font-bold text-gray-800 text-[10px]"> <lucide-icon name="check-circle" class="text-[#00adef]" size="14"></lucide-icon> {{ feature }}
+                </li>
+              </ul>
+            </div>
+
+            <div class="pt-2">
+              <a href="https://wa.me/905321742987" target="_blank" class="inline-flex items-center gap-2.5 bg-[#ff0000] text-white font-black px-6 py-3 rounded-lg hover:bg-black transition-all duration-300 shadow-lg shadow-red-500/20 uppercase text-xs tracking-tighter"> Fiyat Teklifi Al
+                <lucide-icon name="message-circle" size="16"></lucide-icon> </a>
+            </div>
+          </div>
+
+          <div class="rounded-3xl overflow-hidden shadow-2xl bg-white p-1.5 border border-gray-100">
+            <img [src]="selectedService.mainImage" [alt]="selectedService.title" class="w-full h-[300px] object-cover rounded-xl"> </div>
+        </div>
+
+        <div class="bg-gray-50 rounded-[1.5rem] p-6"> <h4 class="font-black text-black mb-6 uppercase tracking-widest text-[9px] flex items-center gap-2"> <span class="w-6 h-px bg-gray-300"></span> UYGULAMA GÖRSELLERİ
+          </h4>
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div *ngFor="let img of selectedService.gallery" 
+                 (click)="openLightbox(img)"
+                 class="group relative overflow-hidden rounded-xl h-28 bg-white p-1 shadow-sm hover:shadow-md transition-all cursor-pointer border border-gray-100"> <img [src]="img" class="w-full h-full object-cover rounded-lg transition-transform duration-700 group-hover:scale-110">
+              <div class="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center rounded-lg">
+                <lucide-icon name="maximize-2" class="text-white" size="18"></lucide-icon> </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="lightboxImage" 
+       class="fixed inset-0 bg-black/95 z-[99999] flex flex-col items-center justify-center p-6 animate-fade-in"
+       (click)="closeLightbox()">
+    
+    <button class="absolute top-6 right-6 text-white/70 hover:text-white transition-colors" (click)="closeLightbox(); $event.stopPropagation()">
+      <lucide-icon name="x" size="32"></lucide-icon>
+    </button>
+
+    <div class="max-w-7xl max-h-[85vh] rounded-2xl overflow-hidden shadow-2xl border-4 border-white/10"
+         (click)="$event.stopPropagation()">
+      <img [src]="lightboxImage" [alt]="selectedService.title" class="w-full h-full object-contain">
+    </div>
+
+    <p class="text-white font-black text-xl uppercase tracking-tighter mt-6">{{ selectedService.title }}</p>
+  </div>
+
+</section>

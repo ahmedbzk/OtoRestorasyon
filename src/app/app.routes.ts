@@ -4,20 +4,34 @@ import { CorporateComponent } from './pages/corporate/corporate.component';
 import { AboutComponent } from './pages/corporate/components/about/about.component';
 import { MediaComponent } from './pages/corporate/components/media/media.component';
 import { SssComponent } from './pages/corporate/components/sss/sss.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { ServicesComponent } from './pages/services/services.component';
+import { BusDesignComponent } from './pages/services/components/bus-design/bus-design.component';
+import { VipDesignComponent } from './pages/services/components/vip-design/vip-design.component';
 
 export const routes: Routes = [
-  { path: '', component: HomeComponent }, // Ana Sayfa
+  { path: '', component: HomeComponent }, 
   
   { 
     path: 'corporate', 
-    component: CorporateComponent, // Banner burada duruyor
+    component: CorporateComponent, 
     children: [
       { path: 'about', component: AboutComponent },
       { path: 'media', component: MediaComponent },
       { path: 'sss', component: SssComponent },
-      { path: '', redirectTo: 'about', pathMatch: 'full' } // /corporate yazınca direkt Hakkımızda'ya atar
+      { path: '', redirectTo: 'about', pathMatch: 'full' } 
     ]
   },
+   { 
+    path: 'services', 
+    component: ServicesComponent, 
+    children: [
+      { path: 'bus-design', component: BusDesignComponent },
+      { path: 'vip-design', component: VipDesignComponent },
+      { path: '', redirectTo: 'about', pathMatch: 'full' } 
+    ]
+  },
+  { path: 'privacy-policy', component: PrivacyPolicyComponent },
 
   { path: '**', redirectTo: '' } // Yanlış link girilirse ana sayfaya döner
 ];

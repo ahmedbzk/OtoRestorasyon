@@ -1,13 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
-import { RouterOutlet, RouterLink, Router, NavigationEnd } from '@angular/router'; // 1. Bunları import et
+import { RouterOutlet,  Router, NavigationEnd } from '@angular/router'; 
 import { LucideAngularModule } from 'lucide-angular';
 import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-corporate',
   standalone: true, // Eğer standalone kullanıyorsan
-  imports: [CommonModule,RouterOutlet, RouterLink, LucideAngularModule], // 2. Buraya ekle
+  imports: [CommonModule,RouterOutlet,  LucideAngularModule], // 2. Buraya ekle
   templateUrl: './corporate.component.html',
   styleUrls: ['./corporate.component.scss']
 })
@@ -31,7 +31,7 @@ export class CorporateComponent implements OnInit {
     if (url.includes('media')) {
       this.pageTitle = 'MEDYA İÇERİKLERİ';
     } else if (url.includes('sss')) {
-      this.pageTitle = 'S.S.S';
+      this.pageTitle = 'SIKÇA SORULAN SORULAR';
     } else {
       this.pageTitle = 'HAKKIMIZDA';
     }

@@ -1,1 +1,43 @@
-<p>sss works!</p>
+<section class="py-20 bg-gray-50">
+  <div class="container mx-auto px-1 ">
+    
+    <div class="mb-12 border-l-4 border-[#ff0000] pl-6">
+      <h2 class="text-4xl font-black text-black tracking-tighter uppercase">S.S.S.</h2>
+      <p class="text-[#00adef] font-bold text-sm tracking-widest uppercase mt-1">Sıkça Sorulan Sorular</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
+      
+      <div class="space-y-4">
+        <div *ngFor="let item of faqs.slice(0, 4)" 
+             class="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all">
+          <button (click)="toggle(item)" 
+                  class="w-full p-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors">
+            <span class="text-md font-bold text-gray-800 pr-4">{{ item.q }}</span>
+            <lucide-icon [name]="item.isOpen ? 'minus' : 'plus'" class="text-[#ff0000] min-w-[20px]"></lucide-icon>
+          </button>
+          <div [class.max-h-0]="!item.isOpen" [class.max-h-60]="item.isOpen" 
+               class="overflow-hidden transition-all duration-500 bg-gray-50/30">
+            <p class="p-5 text-gray-600 text-sm leading-relaxed border-l-2 border-[#00adef] ml-5 mb-3">{{ item.a }}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-4">
+        <div *ngFor="let item of faqs.slice(4, 8)" 
+             class="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all">
+          <button (click)="toggle(item)" 
+                  class="w-full p-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors">
+            <span class="text-md font-bold text-gray-800 pr-4">{{ item.q }}</span>
+            <lucide-icon [name]="item.isOpen ? 'minus' : 'plus'" class="text-[#ff0000] min-w-[20px]"></lucide-icon>
+          </button>
+          <div [class.max-h-0]="!item.isOpen" [class.max-h-60]="item.isOpen" 
+               class="overflow-hidden transition-all duration-500 bg-gray-50/30">
+            <p class="p-5 text-gray-600 text-sm leading-relaxed border-l-2 border-[#00adef] ml-5 mb-3">{{ item.a }}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>

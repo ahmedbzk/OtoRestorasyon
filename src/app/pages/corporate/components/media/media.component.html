@@ -1,1 +1,31 @@
-<p>media works!</p>
+<section class="py-20 bg-white">
+  <div class="container mx-auto px-6">
+    
+    <div class="border-l-4 border-[#ff0000] pl-6 mb-16">
+      <h2 class="text-3xl font-black text-black uppercase tracking-tighter">VİDEOLARIMIZ</h2>
+      <p class="text-[#00adef] font-bold text-sm tracking-widest uppercase mt-1">En Güzel Dönüşümler</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
+      
+      <div *ngFor="let video of videos" class="flex flex-col gap-4 mx-auto w-full max-w-[300px]">
+        
+        <div class="relative overflow-hidden rounded-2xl shadow-md border border-gray-100 bg-gray-50 h-[500px]">
+          <div class="absolute -top-[5px] left-1/2 -translate-x-1/2 w-full scale-[1.05]">
+            <blockquote class="tiktok-embed" 
+              [attr.cite]="'https://www.tiktok.com/@reparatii.reconditionare/video/' + video.id" 
+              [attr.data-video-id]="video.id" 
+              style="max-width: 325px; min-width: 325px;"> 
+              <section> </section> 
+            </blockquote>
+          </div>
+        </div>
+        
+        <p class="text-gray-600 text-[12px] font-semibold italic border-l-2 border-[#00adef] pl-3 py-1 leading-tight">
+          {{ video.desc }}
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>

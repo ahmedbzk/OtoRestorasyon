@@ -1,0 +1,31 @@
+/* Logo Büyüme ve Küçülme Efekti */
+@keyframes logo-pulse {
+  0% { transform: scale(0.85); opacity: 0; }
+  15% { transform: scale(1); opacity: 1; }
+  85% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(0.95); opacity: 0; }
+}
+
+/* Soldan Sağa Işık Geçişi */
+@keyframes shine {
+  0% { left: -150%; }
+  100% { left: 150%; }
+}
+
+.animate-logo-pulse {
+  animation: logo-pulse 3s ease-in-out forwards;
+}
+
+.animate-shine {
+  animation: shine 1.5s ease-in-out 0.5s infinite;
+}
+
+.splash-container {
+  position: fixed;
+  inset: 0;
+  z-index: 99999; /* Diğer her şeyden daha üstte */
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
