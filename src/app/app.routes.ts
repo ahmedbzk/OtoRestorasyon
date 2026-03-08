@@ -8,6 +8,8 @@ import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.co
 import { ServicesComponent } from './pages/services/services.component';
 import { BusDesignComponent } from './pages/services/components/bus-design/bus-design.component';
 import { VipDesignComponent } from './pages/services/components/vip-design/vip-design.component';
+import { SparePartsComponent } from './pages/spare-parts/spare-parts.component';
+import { ContactComponent } from './pages/contact/contact.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent }, 
@@ -28,9 +30,13 @@ export const routes: Routes = [
     children: [
       { path: 'bus-design', component: BusDesignComponent },
       { path: 'vip-design', component: VipDesignComponent },
-      { path: '', redirectTo: 'about', pathMatch: 'full' } 
+      { path: '', redirectTo: 'vip-design', pathMatch: 'full' } 
     ]
   },
+  { path: 'spare-parts', component: SparePartsComponent },
+
+  { path: 'contact', component: ContactComponent },
+
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
 
   { path: '**', redirectTo: '' } // Yanlış link girilirse ana sayfaya döner
