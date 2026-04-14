@@ -223,5 +223,23 @@
     "STORAGE_FEAT_2": "Yüksek Taşıma Kapasitesi",
     "STORAGE_FEAT_3": "Darbelere Dayanıklı Malzeme",
     "STORAGE_FEAT_4": "Kilitli Bölme Seçenekleri"
-  }
+  },
+  "SEO": {
+  "HOME_TITLE": "Anasayfa | VIP Tasarım & Restorasyon",
+  "HOME_DESC": "Araçlarınız için profesyonel VIP tasarım, otobüs dizaynı ve orijinal yedek parça çözümleri. 15 yıllık tecrübe ile hizmetinizdeyiz.",
+  "ABOUT_TITLE": "Hakkımızda | VIP Araç Dizayn ve Restorasyon Uzmanları",
+  "ABOUT_DESC": "Araç restorasyonu ve VIP araç tasarımında öncü kuruluş. Uzman ekibimiz ve kaliteli işçiliğimizle tanışın.",
+  "MEDIA_TITLE": "Medya İçerikleri | VIP Tasarım & Restorasyon - Videolarımız ve Güncel Çalışmalarımız",
+  "MEDIA_DESC": "VIP dönüşüm ve otobüs dizayn projelerimizin videolarını ve en güncel çalışmalarımızı buradan inceleyin.",
+  "FAQ_TITLE": "S.S.S | VIP Tasarım & Restorasyon - Sıkça Sorulan Sorular",
+  "FAQ_DESC": "VIP araç tasarımı, restorasyon süreci ve orijinal parça garantisi hakkında merak ettiğiniz tüm soruların cevapları.",
+  "VIP_TITLE": "VIP Dizayn | VIP Tasarım & Restorasyon - Kişiye Özel Lüks Araçlar",
+  "VIP_DESC": "Lüks ve konforu bir arada sunan VIP araç tasarım segmentlerimiz. Luxury, Economy ve Ticari çözümlerle aracınızı baştan yaratın.",
+  "BUS_TITLE": "Otobüs Dizayn | VIP Tasarım & Restorasyon - Modern İç Mekan Çözümleri",
+  "BUS_DESC": "Otobüsler için multimedya sistemleri, koltuk döşeme ve akıllı depolama çözümleri. Konforlu yolculuklar için tasarım.",
+  "PARTS_TITLE": "Yedek Parçalar | VIP Tasarım & Restorasyon - Orijinal Parça Bileşenleri",
+  "PARTS_DESC": "Hava aksamı, mekanik parçalar ve aksesuar korna setleri. En kaliteli yedek parçaları kataloğumuz.",
+  "CONTACT_TITLE": "İletişim | VIP Tasarım & Restorasyon - Bize Ulaşın",
+  "CONTACT_DESC": "Atölye adresimiz, telefon numaralarımız ve WhatsApp hattımız. VIP tasarım projeleriniz için hemen teklif alın."
+}
 }

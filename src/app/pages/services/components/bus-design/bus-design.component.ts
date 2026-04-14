@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
 import { TranslateModule } from '@ngx-translate/core'; 
+import { SeoService } from '../../../../services/seo.service'; 
+
 interface BusService {
   id: string;
   title: string;
@@ -19,7 +21,15 @@ interface BusService {
   templateUrl: './bus-design.component.html',
   styleUrl: './bus-design.component.scss'
 })
-export class BusDesignComponent {
+export class BusDesignComponent implements OnInit {
+
+  constructor(private seoService: SeoService){}
+
+  ngOnInit() {
+    this.seoService.updateMeta('SEO.BUS_TITLE', 'SEO.BUS_DESC');
+  }
+
+
   lightboxImage: string | null = null;
 
   services: BusService[] = [

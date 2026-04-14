@@ -1,7 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
 import { TranslateModule } from '@ngx-translate/core'; 
+import { SeoService } from '../../../../services/seo.service'; 
 
 @Component({
   selector: 'app-sss',
@@ -9,7 +10,13 @@ import { TranslateModule } from '@ngx-translate/core';
   imports: [CommonModule, LucideAngularModule, TranslateModule],
   templateUrl: './sss.component.html'
 })
-export class SssComponent {
+export class SssComponent implements OnInit {
+
+  constructor(private seoService: SeoService){}
+  ngOnInit(): void {
+    this.seoService.updateMeta('SEO.FAQ_TITLE', 'SEO.FAQ_DESC');
+  }
+  
   faqs = [
     { q: 'SSS.Q1', a: 'SSS.A1', isOpen: false },
     { q: 'SSS.Q2', a: 'SSS.A2', isOpen: false },

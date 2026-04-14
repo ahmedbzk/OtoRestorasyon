@@ -223,5 +223,23 @@
     "STORAGE_FEAT_2": "High Carrying Capacity",
     "STORAGE_FEAT_3": "Impact Resistant Material",
     "STORAGE_FEAT_4": "Locked Compartment Options"
-  }
+  },
+  "SEO": {
+  "HOME_TITLE": "Home | VIP Design & Restoration",
+  "HOME_DESC": "Professional VIP design, bus design, and original spare parts solutions for your vehicles. At your service with 15 years of experience.",
+  "ABOUT_TITLE": "About Us | Specialists in VIP Vehicle Design and Restoration",
+  "ABOUT_DESC": "A leading company in car restoration and VIP vehicle design. Meet our expert team and high-quality craftsmanship.",
+  "MEDIA_TITLE": "Media Content | VIP Design & Restoration - Our Videos and Recent Projects",
+  "MEDIA_DESC": "Browse our VIP conversion and bus design project videos and our most up-to-date work here.",
+  "FAQ_TITLE": "F.A.Q | VIP Design & Restoration - Frequently Asked Questions",
+  "FAQ_DESC": "Answers to all the questions you have about the VIP vehicle design and restoration process and the original parts guarantee.",
+  "VIP_TITLE": "VIP Design | VIP Design & Restoration - Custom Luxury Vehicles",
+  "VIP_DESC": "Our VIP vehicle design segments offering luxury and comfort together. Recreate your vehicle with Luxury, Economy, and Commercial solutions.",
+  "BUS_TITLE": "Bus Design | VIP Design & Restoration - Modern Interior Solutions",
+  "BUS_DESC": "Multimedia systems, seat upholstery, and smart storage solutions for buses. Designed for comfortable journeys.",
+  "PARTS_TITLE": "Spare Parts | VIP Design & Restoration - Original Parts Components",
+  "PARTS_DESC": "Air components, mechanical parts, and accessory horn sets. Our catalog of the highest quality spare parts.",
+  "CONTACT_TITLE": "Contact | VIP Design & Restoration - Contact Us",
+  "CONTACT_DESC": "Our workshop address, phone numbers, and WhatsApp line. Get a quote now for your VIP design projects."
+}
 }

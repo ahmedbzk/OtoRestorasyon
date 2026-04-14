@@ -1,8 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
 import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
 import { TranslateModule } from '@ngx-translate/core'; 
+import { SeoService } from '../../services/seo.service';
 
 interface Part {
   title: string;
@@ -33,8 +34,15 @@ interface Part {
     ])
   ]
 })
-export class SparePartsComponent {
+export class SparePartsComponent implements OnInit{
   pageTitleKey = 'NAV.SPARE_PARTS';
+
+
+  constructor(private seoService: SeoService){}
+
+  ngOnInit(): void {
+    this.seoService.updateMeta('SEO.PARTS_TITLE', 'SEO.PARTS_DESC');
+  }
   
   categories = [
     { key: 'ALL', label: 'SPARE_PARTS.CAT_ALL' },

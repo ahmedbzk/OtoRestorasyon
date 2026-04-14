@@ -1,6 +1,7 @@
 import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser, CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core'; 
+import { SeoService } from '../../../../services/seo.service'; 
 
 @Component({
   selector: 'app-media',
@@ -20,9 +21,11 @@ export class MediaComponent implements AfterViewInit {
     { id: '7067043602316250370', desc: 'MEDIA.VIDEO6_DESC' }
   ];
 
-  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(@Inject(PLATFORM_ID) private platformId: Object,private seoService: SeoService) {}
 
   ngAfterViewInit() {
+    this.seoService.updateMeta('SEO.MEDIA_TITLE', 'SEO.MEDIA_DESC');
+    
     if (isPlatformBrowser(this.platformId)) {
       this.loadTikTokScript();
     }

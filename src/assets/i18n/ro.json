@@ -223,5 +223,23 @@
     "STORAGE_FEAT_2": "Capacitate Mare de Transport",
     "STORAGE_FEAT_3": "Material Rezistent la Impact",
     "STORAGE_FEAT_4": "Opțiuni de Compartiment cu Blocare"
-  }
+  },
+  "SEO": {
+  "HOME_TITLE": "Acasă | Design VIP & Restaurare",
+  "HOME_DESC": "Soluții profesionale de design VIP, design de autobuze și piese de schimb originale pentru vehiculele dumneavoastră. La dispoziția dumneavoastră cu 15 ani de experiență.",
+  "ABOUT_TITLE": "Despre Noi | Specialiști în Design și Restaurare Vehicule VIP",
+  "ABOUT_DESC": "O companie lider în restaurarea auto și designul vehiculelor VIP. Faceți cunoștință cu echipa noastră de experți și măiestria de înaltă calitate.",
+  "MEDIA_TITLE": "Conținut Media | Design VIP & Restaurare - Videoclipurile și Proiectele Noastre",
+  "MEDIA_DESC": "Răsfoiți aici videoclipurile proiectelor noastre de conversie VIP și design de autobuze, precum și cele mai recente lucrări.",
+  "FAQ_TITLE": "Întrebări Frecvente | Design VIP & Restaurare - Întrebări frecvente",
+  "FAQ_DESC": "Răspunsuri la toate întrebările pe care le aveți despre procesul de design și restaurare a vehiculelor VIP și garanția pieselor originale.",
+  "VIP_TITLE": "Design VIP | Design VIP & Restaurare - Vehicule de lux personalizate",
+  "VIP_DESC": "Segmentele noastre de design pentru vehicule VIP oferă lux și confort împreună. Recreați-vă vehiculul cu soluții Luxury, Economy și Comerciale.",
+  "BUS_TITLE": "Design Autobuz | Design VIP & Restaurare - Soluții moderne de interior",
+  "BUS_DESC": "Sisteme multimedia, tapițerie pentru scaune și soluții inteligente de depozitare pentru autobuze. Proiectat pentru călătorii confortabile.",
+  "PARTS_TITLE": "Piese Auto | Design VIP & Restaurare - Componente originale",
+  "PARTS_DESC": "Componente de aer, piese mecanice și seturi de claxoane accesorii. Catalogul nostru de piese de schimb de cea mai înaltă calitate.",
+  "CONTACT_TITLE": "Contact | Design VIP & Restaurare - Contactați-ne",
+  "CONTACT_DESC": "Adresa atelierului nostru, numerele de telefon și linia WhatsApp. Obțineți o ofertă acum pentru proiectele dumneavoastră de design VIP."
+}
 }

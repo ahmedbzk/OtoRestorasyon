@@ -4,6 +4,7 @@ import { RouterOutlet, Router, NavigationEnd } from '@angular/router';
 import { LucideAngularModule } from 'lucide-angular';
 import { filter } from 'rxjs';
 import { TranslateModule } from '@ngx-translate/core'; 
+import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-services',
@@ -15,7 +16,7 @@ import { TranslateModule } from '@ngx-translate/core';
 export class ServicesComponent implements OnInit {
   pageTitle: string = 'NAV.SERVICES'; 
 
-  constructor(private router: Router) {}
+  constructor(private router: Router,private seoService: SeoService) {}
 
   ngOnInit() {
     this.updateTitle();

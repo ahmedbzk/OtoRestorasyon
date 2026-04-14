@@ -4,6 +4,7 @@ import { LucideAngularModule } from 'lucide-angular';
 import { ReactiveFormsModule, FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { TranslateModule } from '@ngx-translate/core'; 
+import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-contact',
@@ -19,9 +20,11 @@ export class ContactComponent implements OnInit {
   toastType: 'success' | 'error' = 'success';
   toastMessageKey = ''; 
 
-  constructor(private fb: FormBuilder, private http: HttpClient) {}
+  constructor(private fb: FormBuilder, private http: HttpClient,private seoService: SeoService) {}
 
   ngOnInit() {
+    this.seoService.updateMeta('SEO.CONTACT_TITLE', 'SEO.CONTACT_DESC');
+    
     this.contactForm = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(3)]],
       email: ['', [Validators.required, Validators.email]],

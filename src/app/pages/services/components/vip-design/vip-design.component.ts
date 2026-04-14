@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
 import { TranslateModule } from '@ngx-translate/core';
+import { SeoService } from '../../../../services/seo.service'; 
 
 interface ServiceDetail {
   id: string;
@@ -21,6 +22,10 @@ interface ServiceDetail {
   styleUrl: './vip-design.component.scss'
 })
 export class VipDesignComponent {
+  constructor(private seoService: SeoService){
+    this.seoService.updateMeta('SEO.VIP_TITLE', 'SEO.VIP_DESC');
+  }
+
   lightboxImage: string | null = null;
 
   services: ServiceDetail[] = [

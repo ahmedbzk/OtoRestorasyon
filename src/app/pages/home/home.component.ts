@@ -5,14 +5,21 @@ import { AboutOverviewComponent } from './components/about-overview/about-overvi
 import { SparePartsOverviewComponent } from './components/spare-parts-overview/spare-parts-overview.component';
 import { ReferancesOverviewComponent } from './components/referances-overview/referances-overview.component';
 import { MottoOverviewComponent } from './components/motto-overview/motto-overview.component';
+import { TranslateModule } from '@ngx-translate/core';
+import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [ServicesOverviewComponent, HeroComponent,AboutOverviewComponent,SparePartsOverviewComponent,ReferancesOverviewComponent,MottoOverviewComponent],
+  imports: [ServicesOverviewComponent, HeroComponent,AboutOverviewComponent,SparePartsOverviewComponent,ReferancesOverviewComponent,MottoOverviewComponent,TranslateModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  constructor(private seoService: SeoService){}
 
+  ngOnInit() {
+    this.seoService.updateMeta('SEO.HOME_TITLE', 'SEO.HOME_DESC');
+  }
+  
 }
