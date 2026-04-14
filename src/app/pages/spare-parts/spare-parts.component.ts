@@ -2,10 +2,12 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LucideAngularModule } from 'lucide-angular';
 import { trigger, transition, style, animate, query, stagger } from '@angular/animations';
+import { TranslateModule } from '@ngx-translate/core'; 
 
 interface Part {
   title: string;
   category: string;
+  categoryKey: string; 
   image: string;
   code: string;
 }
@@ -13,11 +15,10 @@ interface Part {
 @Component({
   selector: 'app-spare-parts',
   standalone: true,
-  imports: [CommonModule, LucideAngularModule],
+  imports: [CommonModule, LucideAngularModule, TranslateModule], 
   templateUrl: './spare-parts.component.html',
   styleUrls: ['./spare-parts.component.scss'],
   animations: [
-    // Liste değişim animasyonu
     trigger('listAnimation', [
       transition('* <=> *', [
         query(':enter', [
@@ -33,51 +34,59 @@ interface Part {
   ]
 })
 export class SparePartsComponent {
-  pageTitle= 'YEDEK PARÇALAR'
-  categories = ['Tümü', 'HAVA AKSAMI', 'YÜRÜR AKSAM', 'MEKANİK AKSAM', 'ELEKTRİK AKSAMI', 'AKSESUAR', 'AYNA AKSAMI'];
-  selectedCategory = 'Tümü';
+  pageTitleKey = 'NAV.SPARE_PARTS';
+  
+  categories = [
+    { key: 'ALL', label: 'SPARE_PARTS.CAT_ALL' },
+    { key: 'AIR', label: 'SPARE_PARTS.CAT_AIR' },
+    { key: 'DRIVE', label: 'SPARE_PARTS.CAT_DRIVE' },
+    { key: 'MECH', label: 'SPARE_PARTS.CAT_MECH' },
+    { key: 'ELEC', label: 'SPARE_PARTS.CAT_ELEC' },
+    { key: 'ACC', label: 'SPARE_PARTS.CAT_ACC' },
+    { key: 'MIRROR', label: 'SPARE_PARTS.CAT_MIRROR' }
+  ];
+
+  selectedCategory = 'ALL';
   displayLimit = 16;
   lightboxImage: string | null = null;
 
-   // Assets listesine göre güncellenmiş örnek veri
   allParts: Part[] = [
-    { title: 'Hava Süspansiyon Körüğü', category: 'HAVA AKSAMI', image: 'assets/spare-parts/havaaksami.png', code: 'BUS-HVA-01' },
-    { title: 'Hava Süspansiyon Körüğü2', category: 'HAVA AKSAMI', image: 'assets/spare-parts/havaaksami2.png', code: 'BUS-HVA-02' },
-    { title: 'Hava Süspansiyon Körüğü3', category: 'HAVA AKSAMI', image: 'assets/spare-parts/havaaksami3.png', code: 'BUS-HVA-03' },
-    { title: 'Hava Süspansiyon Körüğü4', category: 'HAVA AKSAMI', image: 'assets/spare-parts/havaaksami4.png', code: 'BUS-HVA-04' },
-    { title: 'Amortisör Komple', category: 'YÜRÜR AKSAM', image: 'assets/spare-parts/yürüraksam.png', code: 'BUS-YRR-04' },
-    { title: 'Amortisör Komple2', category: 'YÜRÜR AKSAM', image: 'assets/spare-parts/yürüraksam2.png', code: 'BUS-YRR-05' },
-    { title: 'Amortisör Komple3', category: 'YÜRÜR AKSAM', image: 'assets/spare-parts/yürüraksam3.png', code: 'BUS-YRR-06' },
-    { title: 'Amortisör Komple4', category: 'YÜRÜR AKSAM', image: 'assets/spare-parts/yürüraksam4.png', code: 'BUS-YRR-07' },
-    { title: 'LED Far Grubu', category: 'ELEKTRİK AKSAMI', image: 'assets/spare-parts/elektrikaksam.png', code: 'BUS-ELK-12' },
-    { title: 'LED Far Grubu2', category: 'ELEKTRİK AKSAMI', image: 'assets/spare-parts/elektrikaksamı2.png', code: 'BUS-ELK-13' },
-    { title: 'LED Far Grubu3', category: 'ELEKTRİK AKSAMI', image: 'assets/spare-parts/elektrikaksamı3.png', code: 'BUS-ELK-14' },
-    { title: 'LED Far Grubu4', category: 'ELEKTRİK AKSAMI', image: 'assets/spare-parts/elektrikaksamı4.png', code: 'BUS-ELK-15' },
-    { title: 'LED Far Grubu5', category: 'ELEKTRİK AKSAMI', image: 'assets/spare-parts/elektrikaksamı5.png', code: 'BUS-ELK-16' },
-    { title: 'Havalı Korna Seti', category: 'AKSESUAR', image: 'assets/spare-parts/aksesuarkorna.png', code: 'BUS-AKS-09' },
-    { title: 'Havalı Korna Seti2', category: 'AKSESUAR', image: 'assets/spare-parts/aksesuaryanayna.png', code: 'BUS-AKS-10' },
-    { title: 'Motor Takozu', category: 'MEKANİK AKSAM', image: 'assets/spare-parts/mekanikaksam.png', code: 'BUS-MKN-22' },
-    { title: 'Motor Takozu2', category: 'MEKANİK AKSAM', image: 'assets/spare-parts/mekanikaksam2.png', code: 'BUS-MKN-23' },
-    { title: 'Motor Takozu3', category: 'MEKANİK AKSAM', image: 'assets/spare-parts/mekanikaksam3.png', code: 'BUS-MKN-24' },
-    { title: 'Motor Takozu4', category: 'MEKANİK AKSAM', image: 'assets/spare-parts/mekanikaksam4.png', code: 'BUS-MKN-25' },
-    { title: 'Motor Takozu5', category: 'MEKANİK AKSAM', image: 'assets/spare-parts/mekanikaksam5.png', code: 'BUS-MKN-26' },
-    { title: 'Yan Ayna Kapağı', category: 'AYNA AKSAMI', image: 'assets/spare-parts/aynaaksamı.png', code: 'BUS-AYN-05' },
-    { title: 'Yan Ayna Kapağı2', category: 'AYNA AKSAMI', image: 'assets/spare-parts/aksesuaryanayna.png', code: 'BUS-AYN-06' },
-
+    { title: 'SPARE_PARTS.PART_AIR_BELLOW', category: 'SPARE_PARTS.CAT_AIR', categoryKey: 'AIR', image: 'assets/spare-parts/havaaksami.png', code: 'BUS-HVA-01' },
+    { title: 'SPARE_PARTS.PART_AIR_BELLOW', category: 'SPARE_PARTS.CAT_AIR', categoryKey: 'AIR', image: 'assets/spare-parts/havaaksami2.png', code: 'BUS-HVA-02' },
+    { title: 'SPARE_PARTS.PART_AIR_BELLOW', category: 'SPARE_PARTS.CAT_AIR', categoryKey: 'AIR', image: 'assets/spare-parts/havaaksami3.png', code: 'BUS-HVA-03' },
+    { title: 'SPARE_PARTS.PART_AIR_BELLOW', category: 'SPARE_PARTS.CAT_AIR', categoryKey: 'AIR', image: 'assets/spare-parts/havaaksami4.png', code: 'BUS-HVA-04' },
+    { title: 'SPARE_PARTS.PART_SHOCK', category: 'SPARE_PARTS.CAT_DRIVE', categoryKey: 'DRIVE', image: 'assets/spare-parts/yürüraksam.png', code: 'BUS-YRR-04' },
+    { title: 'SPARE_PARTS.PART_SHOCK', category: 'SPARE_PARTS.CAT_DRIVE', categoryKey: 'DRIVE', image: 'assets/spare-parts/yürüraksam2.png', code: 'BUS-YRR-05' },
+    { title: 'SPARE_PARTS.PART_SHOCK', category: 'SPARE_PARTS.CAT_DRIVE', categoryKey: 'DRIVE', image: 'assets/spare-parts/yürüraksam3.png', code: 'BUS-YRR-06' },
+    { title: 'SPARE_PARTS.PART_SHOCK', category: 'SPARE_PARTS.CAT_DRIVE', categoryKey: 'DRIVE', image: 'assets/spare-parts/yürüraksam4.png', code: 'BUS-YRR-07' },
+    { title: 'SPARE_PARTS.PART_LED', category: 'SPARE_PARTS.CAT_ELEC', categoryKey: 'ELEC', image: 'assets/spare-parts/elektrikaksam.png', code: 'BUS-ELK-12' },
+    { title: 'SPARE_PARTS.PART_LED', category: 'SPARE_PARTS.CAT_ELEC', categoryKey: 'ELEC', image: 'assets/spare-parts/elektrikaksamı2.png', code: 'BUS-ELK-13' },
+    { title: 'SPARE_PARTS.PART_LED', category: 'SPARE_PARTS.CAT_ELEC', categoryKey: 'ELEC', image: 'assets/spare-parts/elektrikaksamı3.png', code: 'BUS-ELK-14' },
+    { title: 'SPARE_PARTS.PART_LED', category: 'SPARE_PARTS.CAT_ELEC', categoryKey: 'ELEC', image: 'assets/spare-parts/elektrikaksamı4.png', code: 'BUS-ELK-15' },
+    { title: 'SPARE_PARTS.PART_LED', category: 'SPARE_PARTS.CAT_ELEC', categoryKey: 'ELEC', image: 'assets/spare-parts/elektrikaksamı5.png', code: 'BUS-ELK-16' },
+    { title: 'SPARE_PARTS.PART_HORN', category: 'SPARE_PARTS.CAT_ACC', categoryKey: 'ACC', image: 'assets/spare-parts/aksesuarkorna.png', code: 'BUS-AKS-09' },
+    { title: 'SPARE_PARTS.PART_HORN', category: 'SPARE_PARTS.CAT_ACC', categoryKey: 'ACC', image: 'assets/spare-parts/aksesuaryanayna.png', code: 'BUS-AKS-10' },
+    { title: 'SPARE_PARTS.PART_MOUNT', category: 'SPARE_PARTS.CAT_MECH', categoryKey: 'MECH', image: 'assets/spare-parts/mekanikaksam.png', code: 'BUS-MKN-22' },
+    { title: 'SPARE_PARTS.PART_MOUNT', category: 'SPARE_PARTS.CAT_MECH', categoryKey: 'MECH', image: 'assets/spare-parts/mekanikaksam2.png', code: 'BUS-MKN-23' },
+    { title: 'SPARE_PARTS.PART_MOUNT', category: 'SPARE_PARTS.CAT_MECH', categoryKey: 'MECH', image: 'assets/spare-parts/mekanikaksam3.png', code: 'BUS-MKN-24' },
+    { title: 'SPARE_PARTS.PART_MOUNT', category: 'SPARE_PARTS.CAT_MECH', categoryKey: 'MECH', image: 'assets/spare-parts/mekanikaksam4.png', code: 'BUS-MKN-25' },
+    { title: 'SPARE_PARTS.PART_MOUNT', category: 'SPARE_PARTS.CAT_MECH', categoryKey: 'MECH', image: 'assets/spare-parts/mekanikaksam5.png', code: 'BUS-MKN-26' },
+    { title: 'SPARE_PARTS.PART_MIRROR', category: 'SPARE_PARTS.CAT_MIRROR', categoryKey: 'MIRROR', image: 'assets/spare-parts/aynaaksamı.png', code: 'BUS-AYN-05' },
+    { title: 'SPARE_PARTS.PART_MIRROR', category: 'SPARE_PARTS.CAT_MIRROR', categoryKey: 'MIRROR', image: 'assets/spare-parts/aksesuaryanayna.png', code: 'BUS-AYN-06' }
   ];
 
   get currentCategoryAllParts() {
-    return this.selectedCategory === 'Tümü' 
+    return this.selectedCategory === 'ALL' 
       ? this.allParts 
-      : this.allParts.filter(p => p.category === this.selectedCategory);
+      : this.allParts.filter(p => p.categoryKey === this.selectedCategory);
   }
 
   get filteredParts() {
     return this.currentCategoryAllParts.slice(0, this.displayLimit);
   }
 
-  setCategory(cat: string) {
-    this.selectedCategory = cat;
+  setCategory(catKey: string) {
+    this.selectedCategory = catKey;
     this.displayLimit = 16;
   }
 
@@ -87,11 +96,11 @@ export class SparePartsComponent {
 
   openLightbox(img: string) {
     this.lightboxImage = img;
-    document.body.style.overflow = 'hidden';
+    if (typeof document !== 'undefined') document.body.style.overflow = 'hidden';
   }
 
   closeLightbox() {
     this.lightboxImage = null;
-    document.body.style.overflow = 'auto';
+    if (typeof document !== 'undefined') document.body.style.overflow = 'auto';
   }
 }

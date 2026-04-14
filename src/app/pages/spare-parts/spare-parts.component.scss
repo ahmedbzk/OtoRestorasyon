@@ -1,29 +1,24 @@
-// Kartların varsayılan netliği ve pürüzsüz blur geçişi
 .group {
   img {
     transition: all 0.7s cubic-bezier(0.23, 1, 0.32, 1);
-    filter: blur(0); // Başlangıçta kristal netliğinde
+    filter: blur(0); 
   }
 
   &:hover {
     img {
-      filter: blur(20px); // Sadece hoverda arka plan sakince blurlanır
+      filter: blur(20px); 
     }
   }
 }
 
-// Bilgi Paneli Yazı Dengesi
 .group h3 {
-  // Yazıların çok sıkışık durmasını engellemek için
   max-width: 90%;
 }
 
-// Sayfa geçiş animasyonu için gerekli olan "hidden" durumlarını temizleme
 :host {
   display: block;
 }
 
-// Lightbox Animasyonları
 .animate-fade-in {
   animation: fadeIn 0.3s ease-out;
 }
@@ -33,7 +28,6 @@
   to { opacity: 1; }
 }
 
-// Resim için özel zoom efekti
 img.max-h-full {
   animation: zoomIn 0.4s cubic-bezier(0.23, 1, 0.32, 1);
 }

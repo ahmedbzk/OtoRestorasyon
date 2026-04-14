@@ -2,8 +2,8 @@
   <div class="container mx-auto px-1 ">
     
     <div class="mb-12 border-l-4 border-[#ff0000] pl-6">
-      <h2 class="text-4xl font-black text-black tracking-tighter uppercase">S.S.S.</h2>
-      <p class="text-[#00adef] font-bold text-sm tracking-widest uppercase mt-1">Sıkça Sorulan Sorular</p>
+      <h2 class="text-4xl font-black text-black tracking-tighter uppercase">{{ 'NAV.FAQ' | translate }}</h2>
+      <p class="text-[#00adef] font-bold text-sm tracking-widest uppercase mt-1">{{ 'SSS.SUBTITLE' | translate }}</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-start">
@@ -13,12 +13,12 @@
              class="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all">
           <button (click)="toggle(item)" 
                   class="w-full p-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors">
-            <span class="text-md font-bold text-gray-800 pr-4">{{ item.q }}</span>
+            <span class="text-md font-bold text-gray-800 pr-4">{{ item.q | translate }}</span>
             <lucide-icon [name]="item.isOpen ? 'minus' : 'plus'" class="text-[#ff0000] min-w-[20px]"></lucide-icon>
           </button>
           <div [class.max-h-0]="!item.isOpen" [class.max-h-60]="item.isOpen" 
                class="overflow-hidden transition-all duration-500 bg-gray-50/30">
-            <p class="p-5 text-gray-600 text-sm leading-relaxed border-l-2 border-[#00adef] ml-5 mb-3">{{ item.a }}</p>
+            <p class="p-5 text-gray-600 text-sm leading-relaxed border-l-2 border-[#00adef] ml-5 mb-3">{{ item.a | translate }}</p>
           </div>
         </div>
       </div>
@@ -28,12 +28,12 @@
              class="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden transition-all">
           <button (click)="toggle(item)" 
                   class="w-full p-5 flex items-center justify-between text-left hover:bg-gray-50 transition-colors">
-            <span class="text-md font-bold text-gray-800 pr-4">{{ item.q }}</span>
+            <span class="text-md font-bold text-gray-800 pr-4">{{ item.q | translate }}</span>
             <lucide-icon [name]="item.isOpen ? 'minus' : 'plus'" class="text-[#ff0000] min-w-[20px]"></lucide-icon>
           </button>
           <div [class.max-h-0]="!item.isOpen" [class.max-h-60]="item.isOpen" 
                class="overflow-hidden transition-all duration-500 bg-gray-50/30">
-            <p class="p-5 text-gray-600 text-sm leading-relaxed border-l-2 border-[#00adef] ml-5 mb-3">{{ item.a }}</p>
+            <p class="p-5 text-gray-600 text-sm leading-relaxed border-l-2 border-[#00adef] ml-5 mb-3">{{ item.a | translate }}</p>
           </div>
         </div>
       </div>

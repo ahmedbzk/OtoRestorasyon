@@ -2,7 +2,7 @@
 
   <div class="group flex items-center gap-3">
     <span class="opacity-0 group-hover:opacity-100 transition-all duration-300 bg-[#25D366] text-white text-[10px] font-black py-2 px-4 rounded-md shadow-lg translate-x-4 group-hover:translate-x-0 tracking-widest uppercase">
-      WHATSAPP DESTEK
+      {{ 'SOCIAL_FAB.WHATSAPP' | translate }}
     </span>
     <a href="https://wa.me/905321742987" target="_blank" class="w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-2xl hover:scale-110 transition-all duration-300 cursor-pointer">
       <lucide-icon name="message-circle" size="28"></lucide-icon>
@@ -29,7 +29,7 @@
 
     <div class="group flex items-center gap-3">
       <span class="opacity-0 group-hover:opacity-100 transition-all duration-300 bg-[#0a0a0a] text-white text-[10px] font-black py-2 px-4 rounded-md shadow-lg translate-x-4 group-hover:translate-x-0 tracking-widest uppercase border-r-4 border-[#00adef]">
-        SOSYAL MEDYA
+        {{ 'SOCIAL_FAB.SOCIAL_MEDIA' | translate }}
       </span>
 
       <button (click)="toggleMenu()" class="w-16 h-16 bg-gradient-to-tr from-[#00adef] to-[#0082b3] rounded-full flex items-center justify-center text-white shadow-2xl transition-all duration-500 hover:rotate-12 cursor-pointer relative">

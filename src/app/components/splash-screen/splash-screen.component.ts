@@ -15,7 +15,7 @@ isVisible = true;
  ngOnInit() {
     setTimeout(() => {
       this.isVisible = false;
-      this.destroyed.emit(); // Ana sayfaya haber ver
+      this.destroyed.emit(); 
     }, 3000); //
   }
 }

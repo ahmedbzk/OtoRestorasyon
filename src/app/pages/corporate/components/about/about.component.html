@@ -12,16 +12,18 @@
 
         <div class="absolute -bottom-8 -right-8 w-40 h-40 bg-black rounded-xl p-6 shadow-2xl z-20 flex flex-col justify-center items-center border-b-4 border-[#ff0000]">
           <span class="text-[#00adef] text-4xl font-black italic">15+</span>
-          <span class="text-white text-[9px] font-bold tracking-[0.3em] uppercase text-center mt-2">Yıllık <br> Deneyim</span>
+          <span class="text-white text-[9px] font-bold tracking-[0.3em] uppercase text-center mt-2">
+            {{ 'ABOUT.YEARS_EXPERIENCE_1' | translate }} <br> {{ 'ABOUT.YEARS_EXPERIENCE_2' | translate }}
+          </span>
         </div>
       </div>
 
       <div class="space-y-10">
         <div class="relative">
-          <span class="absolute -top-10 left-0 text-[100px] font-black text-gray-50/50 select-none z-0 uppercase tracking-tighter">ABOUT</span>
+          <span class="absolute -top-10 left-0 text-[100px] font-black text-gray-50/50 select-none z-0 uppercase tracking-tighter">{{ 'NAV.ABOUT_US' | translate }}</span>
           <div class="relative z-10 border-l-4 border-[#ff0000] pl-6">
-            <h2 class="text-4xl font-black uppercase tracking-tighter text-[#1a1a1a]">HAKKIMIZDA</h2>
-            <p class="text-[#00adef] font-bold text-sm tracking-widest uppercase mt-1">Reparatii Reconditionare & Piese Auto VIP Design</p>
+            <h2 class="text-4xl font-black uppercase tracking-tighter text-[#1a1a1a]">{{ 'NAV.ABOUT_US' | translate }}</h2>
+            <p class="text-[#00adef] font-bold text-sm tracking-widest uppercase mt-1">{{ 'ABOUT.SUBTITLE' | translate }}</p>
           </div>
         </div>
 
@@ -29,19 +31,19 @@
           <div class="flex gap-4 items-start">
             <div class="w-1.5 h-1.5 bg-[#ff0000] rounded-full mt-3 flex-shrink-0"></div>
             <p class="text-gray-700 leading-relaxed text-lg font-medium">
-              Otomobillerimiz modern dünyanın vazgeçilmez mobil evleridir. Hayatımızın önemli bir bölümünü geçirdiğimiz bu özel alanlarda <span class="text-black font-black italic">konfor ve prestij</span> bizim için bir seçenek değil, standarttır.
+              {{ 'ABOUT.PARA1_1' | translate }} <span class="text-black font-black italic">{{ 'ABOUT.PARA1_HIGHLIGHT' | translate }}</span> {{ 'ABOUT.PARA1_2' | translate }}
             </p>
           </div>
 
           <div class="flex gap-4 items-start">
             <div class="w-1.5 h-1.5 bg-[#00adef] rounded-full mt-3 flex-shrink-0"></div>
             <p class="text-gray-600 leading-relaxed text-base">
-              Herkes hayalindeki otomobile sahip olmayı ister. Biz, sizi tamamlayan ve ruhunuzu yollara yansıtan o özel tasarımı hayata geçirmek için <span class="text-[#00adef] font-bold">yüzlerce alternatif</span> arasından en doğru mühendislik çözümlerini sunuyoruz.
+              {{ 'ABOUT.PARA2_1' | translate }} <span class="text-[#00adef] font-bold">{{ 'ABOUT.PARA2_HIGHLIGHT' | translate }}</span> {{ 'ABOUT.PARA2_2' | translate }}
             </p>
           </div>
 
           <p class="text-gray-500 italic border-l-2 border-gray-100 pl-6 py-2 text-base">
-            "Kaliteli ve ilkeli hizmet anlayışımızla, aracınız için kurduğunuz hayalleri gerçeğe dönüştürüyoruz."
+            {{ 'ABOUT.QUOTE' | translate }}
           </p>
         </div>
       </div>
@@ -52,37 +54,36 @@
         <div class="w-16 h-16 bg-[#00adef]/10 flex items-center justify-center rounded-lg text-[#00adef] group-hover:bg-[#00adef] group-hover:text-white transition-all">
           <lucide-icon name="pencil-line" size="32"></lucide-icon>
         </div>
-        <h3 class="text-xl font-black uppercase tracking-tight">Ergonomik Tasarım</h3>
-        <p class="text-gray-500 text-sm leading-relaxed">VIP konsept tasarımlarımızda ferahlık ve ergonomiyi esas alarak seyahat zevkinizi yeniden tanımlıyoruz.</p>
+        <h3 class="text-xl font-black text-gray-500 uppercase tracking-tight">{{ 'ABOUT.FEAT1_TITLE' | translate }}</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">{{ 'ABOUT.FEAT1_DESC' | translate }}</p>
       </div>
 
       <div class="space-y-4 group">
         <div class="w-16 h-16 bg-[#ff0000]/10 flex items-center justify-center rounded-lg text-[#ff0000] group-hover:bg-[#ff0000] group-hover:text-white transition-all">
           <lucide-icon name="heart" size="32"></lucide-icon>
         </div>
-        <h3 class="text-xl font-black uppercase tracking-tight">Kişiye Özel</h3>
-        <p class="text-gray-500 text-sm leading-relaxed">Her bütçeye uygun VIP tasarımlar sunarak sevdiklerinizle geçireceğiniz anlara değer katıyoruz.</p>
+        <h3 class="text-xl font-black text-gray-500 uppercase tracking-tight">{{ 'ABOUT.FEAT2_TITLE' | translate }}</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">{{ 'ABOUT.FEAT2_DESC' | translate }}</p>
       </div>
 
       <div class="space-y-4 group">
         <div class="w-16 h-16 bg-black/10 flex items-center justify-center rounded-lg text-black group-hover:bg-black group-hover:text-white transition-all">
           <lucide-icon name="award" size="32"></lucide-icon>
         </div>
-        <h3 class="text-xl font-black uppercase tracking-tight">Yüksek Standart</h3>
-        <p class="text-gray-500 text-sm leading-relaxed">Kaliteli ve ilkeli hizmet anlayışımızla hayallerinizi hayata geçirmek için buradayız.</p>
+        <h3 class="text-xl font-black text-gray-500 uppercase tracking-tight">{{ 'ABOUT.FEAT3_TITLE' | translate }}</h3>
+        <p class="text-gray-500 text-sm leading-relaxed">{{ 'ABOUT.FEAT3_DESC' | translate }}</p>
       </div>
     </div>
 
     <div class="mt-20 p-12 bg-[#0a0a0a]/95 rounded-3xl relative overflow-hidden">
       <div class="absolute top-0 right-0 w-96 h-96 bg-[#00adef]/10 blur-[100px]"></div>
       <div class="relative z-10 text-center space-y-6">
-        <h4 class="text-white text-3xl md:text-5xl font-light  tracking-tighter">
-          "Hayallerinizdeki seyahat keyfini <span class="text-[#00adef] font-black not-italic">yeniden keşfedin.</span>"
+        <h4 class="text-white text-3xl md:text-5xl font-light tracking-tighter">
+          {{ 'ABOUT.BANNER_START' | translate }} <span class="text-[#00adef] font-black not-italic">{{ 'ABOUT.BANNER_HIGHLIGHT' | translate }}</span>
         </h4>
-        <p class="text-gray-400 font-bold uppercase tracking-[0.4em] text-xs">Otobüs ve VIP Araçların Tasarım Dünyası</p>
+        <p class="text-gray-400 font-bold uppercase tracking-[0.4em] text-xs">{{ 'ABOUT.BANNER_SUBTITLE' | translate }}</p>
       </div>
     </div>
 
   </div>
 </section>
-

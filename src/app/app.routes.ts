@@ -39,5 +39,5 @@ export const routes: Routes = [
 
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
 
-  { path: '**', redirectTo: '' } // Yanlış link girilirse ana sayfaya döner
+  { path: '**', redirectTo: '' } 
 ];

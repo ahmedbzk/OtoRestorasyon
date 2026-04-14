@@ -2,7 +2,6 @@
         class="fixed top-0 left-0 w-full z-[5000] transition-all duration-500 ease-in-out">
   
   <nav class="container mx-auto px-6 md:px-12 flex justify-between items-center text-white">
-    
     <div class="flex-shrink-0">
       <a routerLink="/">
         <img src="assets/logo2.png" alt="Logo" 
@@ -12,49 +11,48 @@
     </div>
 
     <ul class="hidden lg:flex gap-10 items-center font-bold text-[13px] tracking-[0.15em] uppercase">
-      <li><a routerLink="/" class="hover:text-[#00adef] flex items-center gap-2 transition-all">ANASAYFA <lucide-icon name="home" size="18"></lucide-icon></a></li>
+      <li><a routerLink="/" class="hover:text-[#00adef] flex items-center gap-2 transition-all">{{ 'NAV.HOME' | translate }} <lucide-icon name="home" size="18"></lucide-icon></a></li>
       
       <li class="group relative py-4">
         <div class="flex items-center gap-2 hover:text-[#00adef] cursor-pointer transition-all">
-          KURUMSAL <lucide-icon name="building2" size="20"></lucide-icon>
+          {{ 'NAV.CORPORATE' | translate }} <lucide-icon name="building2" size="20"></lucide-icon>
           <lucide-icon name="chevron-down" size="14" class="group-hover:rotate-180 transition-transform duration-300"></lucide-icon>
         </div>
-        <ul class="absolute top-full left-0 w-64 bg-black/95 border-t-2 border-[#ff0000] py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-          <li><a routerLink="/corporate/about" class="block px-6 py-3 hover:bg-[#00adef] uppercase">HAKKIMIZDA</a></li>
-          <li><a routerLink="/corporate/media" class="block px-6 py-3 hover:bg-[#00adef] uppercase">MEDYA İÇERİKLERİ</a></li>
-          <li><a routerLink="/corporate/sss" class="block px-6 py-3 hover:bg-[#00adef] uppercase">S.S.S</a></li>
+        <ul class="absolute top-full left-0 w-64 bg-black/95 border-t-2 border-[#ff0000] py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 shadow-2xl">
+          <li><a routerLink="/corporate/about" class="block px-6 py-3 hover:bg-[#00adef] uppercase">{{ 'NAV.ABOUT_US' | translate }}</a></li>
+          <li><a routerLink="/corporate/media" class="block px-6 py-3 hover:bg-[#00adef] uppercase">{{ 'NAV.MEDIA' | translate }}</a></li>
+          <li><a routerLink="/corporate/sss" class="block px-6 py-3 hover:bg-[#00adef] uppercase">{{ 'NAV.FAQ' | translate }}</a></li>
         </ul>
       </li>
 
       <li class="group relative py-4">
         <div class="flex items-center gap-2 hover:text-[#00adef] cursor-pointer transition-all">
-          HİZMETLERİMİZ <lucide-icon name="car" size="20"></lucide-icon>
+          {{ 'NAV.SERVICES' | translate }} <lucide-icon name="car" size="20"></lucide-icon>
           <lucide-icon name="chevron-down" size="14" class="group-hover:rotate-180 transition-transform duration-300"></lucide-icon>
         </div>
-        <ul class="absolute top-full left-0 w-64 bg-black/95 border-t-2 border-[#ff0000] py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-          <li><a routerLink="/services/vip-design" class="block px-6 py-3 hover:bg-[#00adef] uppercase">VİP DİZAYN</a></li>
-          <li><a routerLink="/services/bus-design" class="block px-6 py-3 hover:bg-[#00adef] uppercase">OTOBÜS DİZAYN</a></li>
+        <ul class="absolute top-full left-0 w-64 bg-black/95 border-t-2 border-[#ff0000] py-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50 shadow-2xl">
+          <li><a routerLink="/services/vip-design" class="block px-6 py-3 hover:bg-[#00adef] uppercase">{{ 'NAV.VIP_DESIGN' | translate }}</a></li>
+          <li><a routerLink="/services/bus-design" class="block px-6 py-3 hover:bg-[#00adef] uppercase">{{ 'NAV.BUS_DESIGN' | translate }}</a></li>
         </ul>
       </li>
 
-      <li><a routerLink="/spare-parts" class="hover:text-[#00adef] flex items-center gap-2 transition-all">YEDEK PARÇALAR <lucide-icon name="wrench" size="18"></lucide-icon></a></li>
-      <li><a routerLink="/contact" class="hover:text-[#00adef] flex items-center gap-2 transition-all">İLETİŞİM <lucide-icon name="phone-call" size="18"></lucide-icon></a></li>
+      <li><a routerLink="/spare-parts" class="hover:text-[#00adef] flex items-center gap-2 transition-all">{{ 'NAV.SPARE_PARTS' | translate }} <lucide-icon name="wrench" size="18"></lucide-icon></a></li>
+      <li><a routerLink="/contact" class="hover:text-[#00adef] flex items-center gap-2 transition-all">{{ 'NAV.CONTACT' | translate }} <lucide-icon name="phone-call" size="18"></lucide-icon></a></li>
     </ul>
 
     <div class="flex items-center gap-6">
-      
       <div class="hidden md:block relative group">
         <div class="flex items-center gap-3 border-r border-white/20 pr-6 cursor-pointer group">
           <img [src]="'assets/flags/' + (currentLang === 'TR' ? 'turkey' : currentLang === 'BG' ? 'bulgaria' : currentLang === 'RO' ? 'romania' : 'england') + '.png'" 
-               class="w-7 h-7 rounded-full object-contain border border-white/20 shadow-lg group-hover:scale-110 transition-transform duration-300">
+               class="w-7 h-7 rounded-full object-cover border-2 border-white/20 shadow-lg group-hover:scale-110 transition-transform duration-300">
           <span class="text-[11px] font-black tracking-tighter">{{ currentLang }}</span>
         </div>
         
         <ul class="absolute top-full right-0 mt-4 w-40 bg-black/95 py-2 border border-white/10 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[150] shadow-2xl">
-          <li><button (click)="setLanguage('TR')" class="flex items-center gap-3 px-5 py-3 hover:bg-[#00adef] w-full text-left transition text-[10px] font-black"><img src="assets/flags/turkey.png" class="w-5 h-5"> TR</button></li>
-          <li><button (click)="setLanguage('BG')" class="flex items-center gap-3 px-5 py-3 hover:bg-[#00adef] w-full text-left transition text-[10px] font-black"><img src="assets/flags/bulgaria.png" class="w-5 h-5"> BG</button></li>
-          <li><button (click)="setLanguage('RO')" class="flex items-center gap-3 px-5 py-3 hover:bg-[#00adef] w-full text-left transition text-[10px] font-black"><img src="assets/flags/romania.png" class="w-5 h-5"> RO</button></li>
-          <li><button (click)="setLanguage('EN')" class="flex items-center gap-3 px-5 py-3 hover:bg-[#00adef] w-full text-left transition text-[10px] font-black"><img src="assets/flags/england.png" class="w-5 h-5"> EN</button></li>
+          <li><button (click)="setLanguage('TR')" class="flex items-center gap-3 px-5 py-3 hover:bg-[#00adef] w-full text-left transition text-[10px] font-black"><img src="assets/flags/turkey.png" class="w-5 h-5 rounded-full object-cover"> TR</button></li>
+          <li><button (click)="setLanguage('BG')" class="flex items-center gap-3 px-5 py-3 hover:bg-[#00adef] w-full text-left transition text-[10px] font-black"><img src="assets/flags/bulgaria.png" class="w-5 h-5 rounded-full object-cover"> BG</button></li>
+          <li><button (click)="setLanguage('RO')" class="flex items-center gap-3 px-5 py-3 hover:bg-[#00adef] w-full text-left transition text-[10px] font-black"><img src="assets/flags/romania.png" class="w-5 h-5 rounded-full object-cover"> RO</button></li>
+          <li><button (click)="setLanguage('EN')" class="flex items-center gap-3 px-5 py-3 hover:bg-[#00adef] w-full text-left transition text-[10px] font-black"><img src="assets/flags/england.png" class="w-5 h-5 rounded-full object-cover"> EN</button></li>
         </ul>
       </div>
 
@@ -65,83 +63,78 @@
   </nav>
 
   <div *ngIf="isMenuOpen" class="fixed inset-0 z-[100000] flex justify-start pointer-events-auto">
+    
     <div (click)="isMenuOpen = false" class="absolute inset-0 bg-black/70 backdrop-blur-md animate-fade-in"></div>
     
-    <div class="relative w-[85%] h-full bg-white text-black shadow-2xl flex flex-col transform transition-transform duration-300 ease-out animate-slide-in overflow-hidden">
+    <div class="relative w-[85%] h-full shadow-2xl flex flex-col mobile-drawer overflow-hidden">
       
-      <div class="flex justify-between items-center p-4 border-b border-gray-100 bg-white">
-        <img src="assets/logo2.png" alt="Logo" class="h-24 md:h-32 w-auto object-contain"> 
-        <button (click)="isMenuOpen = false" class="p-3 hover:bg-gray-100 rounded-full text-gray-400">
-          <lucide-icon name="x" size="36"></lucide-icon>
+      <div class="flex justify-between items-center p-6 border-b border-gray-200/50">
+        <img src="assets/logo2.png" alt="Logo" class="h-20 md:h-24 w-auto object-contain"> 
+        <button (click)="isMenuOpen = false" class="p-3 hover:bg-gray-200/50 rounded-full text-gray-500 transition-colors">
+          <lucide-icon name="x" size="32"></lucide-icon>
         </button>
       </div>
 
       <ul class="flex-1 p-8 space-y-2 font-black tracking-widest uppercase text-[11px] overflow-y-auto">
-        <li><a routerLink="/" (click)="isMenuOpen = false" class="flex items-center gap-4 py-5 border-b border-gray-50"><lucide-icon name="home" size="22"></lucide-icon> ANASAYFA</a></li>
+        <li>
+          <a routerLink="/" (click)="isMenuOpen = false" class="flex items-center gap-4 py-5 border-b border-gray-200/50 hover:text-[#00adef] transition-all">
+            <lucide-icon name="home" size="22"></lucide-icon> {{ 'NAV.HOME' | translate }}
+          </a>
+        </li>
         
         <li>
           <details class="group">
-            <summary class="list-none py-5 border-b border-gray-50 flex justify-between items-center cursor-pointer">
-              <span class="flex items-center gap-4"><lucide-icon name="building2" size="22"></lucide-icon> KURUMSAL</span>
-              <lucide-icon name="chevron-down" size="18" class="group-open:rotate-180 transition-transform"></lucide-icon>
+            <summary class="list-none py-5 border-b border-gray-200/50 flex justify-between items-center cursor-pointer hover:text-[#00adef] transition-all">
+              <span class="flex items-center gap-4"><lucide-icon name="building2" size="22"></lucide-icon> {{ 'NAV.CORPORATE' | translate }}</span>
+              <lucide-icon name="chevron-down" size="18" class="group-open:rotate-180 transition-transform duration-500"></lucide-icon>
             </summary>
-            <ul class="pl-12 pt-4 space-y-5 text-gray-500 font-black text-[10px]">
-              <li><a routerLink="/corporate/about" (click)="isMenuOpen = false">HAKKIMIZDA</a></li>
-              <li><a routerLink="/corporate/media" (click)="isMenuOpen = false">MEDYA İÇERİKLERİ</a></li>
-              <li><a routerLink="/corporate/sss" (click)="isMenuOpen = false">S.S.S</a></li>
+            <ul class="pl-12 pt-4 space-y-5 text-gray-400 font-black text-[10px]">
+              <li><a routerLink="/corporate/about" (click)="isMenuOpen = false" class="hover:text-black">{{ 'NAV.ABOUT_US' | translate }}</a></li>
+              <li><a routerLink="/corporate/media" (click)="isMenuOpen = false" class="hover:text-black">{{ 'NAV.MEDIA' | translate }}</a></li>
+              <li><a routerLink="/corporate/sss" (click)="isMenuOpen = false" class="hover:text-black">{{ 'NAV.FAQ' | translate }}</a></li>
             </ul>
           </details>
         </li>
 
         <li>
           <details class="group">
-            <summary class="list-none py-5 border-b border-gray-50 flex justify-between items-center cursor-pointer">
-              <span class="flex items-center gap-4"><lucide-icon name="car" size="22"></lucide-icon> HİZMETLERİMİZ</span>
-              <lucide-icon name="chevron-down" size="18" class="group-open:rotate-180 transition-transform"></lucide-icon>
+            <summary class="list-none py-5 border-b border-gray-200/50 flex justify-between items-center cursor-pointer hover:text-[#00adef] transition-all">
+              <span class="flex items-center gap-4"><lucide-icon name="car" size="22"></lucide-icon> {{ 'NAV.SERVICES' | translate }}</span>
+              <lucide-icon name="chevron-down" size="18" class="group-open:rotate-180 transition-transform duration-500"></lucide-icon>
             </summary>
-            <ul class="pl-12 pt-4 space-y-5 text-gray-500 font-black text-[10px]">
-              <li><a routerLink="/services/vip-design" (click)="isMenuOpen = false">VİP DİZAYN</a></li>
-              <li><a routerLink="/services/bus-design" (click)="isMenuOpen = false">OTOBÜS DİZAYN</a></li>
+            <ul class="pl-12 pt-4 space-y-5 text-gray-400 font-black text-[10px]">
+              <li><a routerLink="/services/vip-design" (click)="isMenuOpen = false" class="hover:text-black">{{ 'NAV.VIP_DESIGN' | translate }}</a></li>
+              <li><a routerLink="/services/bus-design" (click)="isMenuOpen = false" class="hover:text-black">{{ 'NAV.BUS_DESIGN' | translate }}</a></li>
             </ul>
           </details>
         </li>
 
-        <li><a routerLink="/spare-parts" (click)="isMenuOpen = false" class="flex items-center gap-4 py-5 border-b border-gray-50"><lucide-icon name="wrench" size="22"></lucide-icon> YEDEK PARÇALAR</a></li>
-        <li><a routerLink="/contact" (click)="isMenuOpen = false" class="flex items-center gap-4 py-5 border-b border-gray-50"><lucide-icon name="phone-call" size="22"></lucide-icon> İLETİŞİM</a></li>
+        <li><a routerLink="/spare-parts" (click)="isMenuOpen = false" class="flex items-center gap-4 py-5 border-b border-gray-200/50 hover:text-[#00adef] transition-all"><lucide-icon name="wrench" size="22"></lucide-icon> {{ 'NAV.SPARE_PARTS' | translate }}</a></li>
+        <li><a routerLink="/contact" (click)="isMenuOpen = false" class="flex items-center gap-4 py-5 border-b border-gray-200/50 hover:text-[#00adef] transition-all"><lucide-icon name="phone-call" size="22"></lucide-icon> {{ 'NAV.CONTACT' | translate }}</a></li>
       </ul>
 
-      <div class="p-4 bg-white border-t border-gray-100 mt-auto relative z-[100001] pointer-events-auto">
-        <span class="text-[10px] font-black text-gray-400 tracking-[0.3em] mb-4 block uppercase">DİL SEÇİMİ</span>
+      <div class="p-6 border-t border-gray-800 mt-auto relative z-[100001] pointer-events-auto" style="background-color: #1a1b1c;">
+        <span class="text-[10px] font-black text-gray-400 tracking-[0.3em] mb-4 block uppercase">{{ 'NAV.LANG_SELECT' | translate }}</span>
         <div class="flex justify-between items-center gap-3">
-          
-          <button (click)="setLanguage('TR')" 
-                  class="flex-1 flex flex-col items-center gap-2 p-3 rounded-2xl transition-all duration-300"
-                  [ngClass]="currentLang === 'TR' ? 'bg-gray-50 shadow-xl scale-110 opacity-100 ring-2 ring-[#00adef]' : 'opacity-40 hover:opacity-100'">
-            <img src="assets/flags/turkey.png" class="w-10 h-10 rounded-full border border-gray-100">
-            <span class="text-[9px] font-black">TR</span>
+          <button (click)="setLanguage('TR')" class="flex-1 flex flex-col items-center gap-2 p-3 rounded-2xl transition-all duration-300" [ngClass]="currentLang === 'TR' ? 'bg-white shadow-xl scale-110 opacity-100 ring-2 ring-[#00adef]' : 'bg-gray-800/50 opacity-40'">
+            <img src="assets/flags/turkey.png" class="w-10 h-10 rounded-full border border-gray-700 shadow-sm">
+            <span class="text-[9px] font-black" [ngClass]="currentLang === 'TR' ? 'text-black' : 'text-gray-400'">TR</span>
           </button>
 
-          <button (click)="setLanguage('EN')" 
-                  class="flex-1 flex flex-col items-center gap-2 p-3 rounded-2xl transition-all duration-300"
-                  [ngClass]="currentLang === 'EN' ? 'bg-gray-50 shadow-xl scale-110 opacity-100 ring-2 ring-[#00adef]' : 'opacity-40 hover:opacity-100'">
-            <img src="assets/flags/england.png" class="w-10 h-10 rounded-full border border-gray-100">
-            <span class="text-[9px] font-black">EN</span>
+          <button (click)="setLanguage('EN')" class="flex-1 flex flex-col items-center gap-2 p-3 rounded-2xl transition-all duration-300" [ngClass]="currentLang === 'EN' ? 'bg-white shadow-xl scale-110 opacity-100 ring-2 ring-[#00adef]' : 'bg-gray-800/50 opacity-40'">
+            <img src="assets/flags/england.png" class="w-10 h-10 rounded-full border border-gray-700 shadow-sm">
+            <span class="text-[9px] font-black" [ngClass]="currentLang === 'EN' ? 'text-black' : 'text-gray-400'">EN</span>
           </button>
 
-          <button (click)="setLanguage('RO')" 
-                  class="flex-1 flex flex-col items-center gap-2 p-3 rounded-2xl transition-all duration-300"
-                  [ngClass]="currentLang === 'RO' ? 'bg-gray-50 shadow-xl scale-110 opacity-100 ring-2 ring-[#00adef]' : 'opacity-40 hover:opacity-100'">
-            <img src="assets/flags/romania.png" class="w-10 h-10 rounded-full border border-gray-100">
-            <span class="text-[9px] font-black">RO</span>
+          <button (click)="setLanguage('RO')" class="flex-1 flex flex-col items-center gap-2 p-3 rounded-2xl transition-all duration-300" [ngClass]="currentLang === 'RO' ? 'bg-white shadow-xl scale-110 opacity-100 ring-2 ring-[#00adef]' : 'bg-gray-800/50 opacity-40'">
+            <img src="assets/flags/romania.png" class="w-10 h-10 rounded-full border border-gray-700 shadow-sm">
+            <span class="text-[9px] font-black" [ngClass]="currentLang === 'RO' ? 'text-black' : 'text-gray-400'">RO</span>
           </button>
 
-          <button (click)="setLanguage('BG')" 
-                  class="flex-1 flex flex-col items-center gap-2 p-3 rounded-2xl transition-all duration-300"
-                  [ngClass]="currentLang === 'BG' ? 'bg-gray-50 shadow-xl scale-110 opacity-100 ring-2 ring-[#00adef]' : 'opacity-40 hover:opacity-100'">
-            <img src="assets/flags/bulgaria.png" class="w-10 h-10 rounded-full border border-gray-100">
-            <span class="text-[9px] font-black">BG</span>
+          <button (click)="setLanguage('BG')" class="flex-1 flex flex-col items-center gap-2 p-3 rounded-2xl transition-all duration-300" [ngClass]="currentLang === 'BG' ? 'bg-white shadow-xl scale-110 opacity-100 ring-2 ring-[#00adef]' : 'bg-gray-800/50 opacity-40'">
+            <img src="assets/flags/bulgaria.png" class="w-10 h-10 rounded-full border border-gray-700 shadow-sm">
+            <span class="text-[9px] font-black" [ngClass]="currentLang === 'BG' ? 'text-black' : 'text-gray-400'">BG</span>
           </button>
-
         </div>
       </div>
     </div>

@@ -11,14 +11,15 @@
 
     <div class="max-w-4xl mx-auto">
       <h2 class="text-3xl md:text-5xl font-light italic tracking-tighter text-[#1a1a1a] leading-tight">
-        "Aracınız sadece bir yolculuk değil, 
-        <span class="text-[#00adef] font-black uppercase not-italic">karakterinizin</span> 
-        yollara vuran <span class="text-[#ff0000] font-black uppercase not-italic">imzasıdır.</span>"
+        {{ 'MOTTO.QUOTE_PART1' | translate }} 
+        <span class="text-[#00adef] font-black uppercase not-italic">{{ 'MOTTO.CHARACTER' | translate }}</span> 
+        {{ 'MOTTO.QUOTE_PART2' | translate }} 
+        <span class="text-[#ff0000] font-black uppercase not-italic">{{ 'MOTTO.SIGNATURE' | translate }}</span>
       </h2>
       
       <div class="mt-12 flex flex-col items-center">
         <p class="text-gray-400 text-xs md:text-sm font-bold tracking-[0.4em] uppercase mb-10">
-          Otobüs ve VIP Tasarımda Estetikle Mühendisliğin Buluştuğu Nokta
+          {{ 'MOTTO.SUBTITLE' | translate }}
         </p>
         
         <div class="flex items-center gap-8">

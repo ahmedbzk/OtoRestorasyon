@@ -3,11 +3,11 @@
     
     <div class="flex justify-between items-end mb-12 border-l-4 border-[#ff0000] pl-6">
       <div>
-        <h4 class="text-[#00adef] text-xs font-black tracking-[0.5em] uppercase mb-2">UZMANLIK ALANLARIMIZ</h4>
-        <h2 class="text-2xl md:text-4xl font-light uppercase tracking-tighter">Hizmetlerimiz</h2>
+        <h4 class="text-[#00adef] text-xs font-black tracking-[0.5em] uppercase mb-2">{{ 'SERVICES_OVERVIEW.TITLE_TOP' | translate }}</h4>
+        <h2 class="text-2xl md:text-4xl font-light uppercase tracking-tighter">{{ 'SERVICES_OVERVIEW.TITLE_MAIN' | translate }}</h2>
       </div>
       <button [routerLink]="['/services/vip-design']" class="hidden md:block px-8 py-2 bg-[#00adef] text-[10px] font-black tracking-widest uppercase hover:bg-white hover:text-black transition-all">
-        TÜM HİZMETLERİMİZ
+        {{ 'SERVICES_OVERVIEW.ALL_SERVICES' | translate }}
       </button>
     </div>
 
@@ -15,49 +15,53 @@
       
       <div class="min-h-[300px] md:min-h-0 md:col-span-2 md:row-span-2 group relative overflow-hidden bg-gray-900 shadow-2xl">
         <img src="assets/services/vipluxury1.png" class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:scale-110 transition-all duration-1000">
-        <div class="absolute top-0 left-0 bg-[#00adef] px-4 py-2 z-20 text-[9px] font-bold">VİP ARAÇ</div>
+        <div class="absolute top-0 left-0 bg-[#00adef] px-4 py-2 z-20 text-[9px] font-bold">{{ 'SERVICES_OVERVIEW.VIP_VEHICLE' | translate }}</div>
         <div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black z-10">
-          <h3 class="text-xl font-black uppercase leading-none mb-2">KOMPLE VİP <br> TASARIM</h3>
-          <p class="text-[10px] text-gray-400 opacity-0 group-hover:opacity-100 transition-all">Baştan sona kişiselleştirilmiş lüks deneyimi.</p>
+          <h3 class="text-xl font-black uppercase leading-none mb-2">
+            {{ 'SERVICES_OVERVIEW.VIP_DESIGN_TITLE_1' | translate }} <br> {{ 'SERVICES_OVERVIEW.VIP_DESIGN_TITLE_2' | translate }}
+          </h3>
+          <p class="text-[10px] text-gray-400 opacity-0 group-hover:opacity-100 transition-all">{{ 'SERVICES_OVERVIEW.VIP_DESIGN_DESC' | translate }}</p>
         </div>
       </div>
 
       <div class="min-h-[200px] md:min-h-0 md:col-span-2 group relative overflow-hidden bg-gray-900">
         <img src="assets/services/koltuk1.png" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-all duration-700">
-        <div class="absolute top-0 left-0 bg-[#ff0000] px-4 py-2 z-20 text-[9px] font-bold uppercase">Otobüs Dizayn</div>
+        <div class="absolute top-0 left-0 bg-[#ff0000] px-4 py-2 z-20 text-[9px] font-bold uppercase">{{ 'NAV.BUS_DESIGN' | translate }}</div>
         <div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black z-10">
-          <h3 class="text-lg font-bold uppercase">Koltuk Döşeme</h3>
+          <h3 class="text-lg font-bold uppercase">{{ 'SERVICES_OVERVIEW.SEAT_UPHOLSTERY' | translate }}</h3>
         </div>
       </div>
 
       <div class="min-h-[200px] md:min-h-0 md:col-span-2 group relative overflow-hidden bg-gray-900">
         <img src="assets/services/mikrofon1.png" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-all duration-700">
-        <div class="absolute top-0 left-0 bg-[#00adef] px-4 py-2 z-20 text-[9px] font-bold uppercase">VİP ARAÇ</div>
+        <div class="absolute top-0 left-0 bg-[#00adef] px-4 py-2 z-20 text-[9px] font-bold uppercase">{{ 'SERVICES_OVERVIEW.VIP_VEHICLE' | translate }}</div>
         <div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black z-10">
-          <h3 class="text-lg font-bold uppercase">SES SİSTEMLERİ</h3>
+          <h3 class="text-lg font-bold uppercase">{{ 'SERVICES_OVERVIEW.SOUND_SYSTEMS' | translate }}</h3>
         </div>
       </div>
 
       <div class="min-h-[200px] md:min-h-0 md:col-span-2 group relative overflow-hidden bg-gray-900">
         <img src="assets/services/tv1.png" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-all duration-700">
-        <div class="absolute top-0 left-0 bg-[#ff7600] px-4 py-2 z-20 text-[9px] font-bold uppercase">MULTİMEDYA</div>
+        <div class="absolute top-0 left-0 bg-[#ff7600] px-4 py-2 z-20 text-[9px] font-bold uppercase">{{ 'SERVICES_OVERVIEW.MULTIMEDIA' | translate }}</div>
         <div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black z-10">
-          <h3 class="text-lg font-bold uppercase">TV & DVD DEĞİŞİMİ</h3>
+          <h3 class="text-lg font-bold uppercase">{{ 'SERVICES_OVERVIEW.TV_DVD_CHANGE' | translate }}</h3>
         </div>
       </div>
 
       <div class="min-h-[200px] md:min-h-0 md:col-span-2 group relative overflow-hidden bg-gray-900">
         <img src="assets/services/portbagaj1.png" class="absolute inset-0 w-full h-full object-cover opacity-50 group-hover:scale-110 transition-all duration-700">
-        <div class="absolute top-0 left-0 bg-[#ff0000] px-4 py-2 z-20 text-[9px] font-bold uppercase">Otobüs Dizayn</div>
+        <div class="absolute top-0 left-0 bg-[#ff0000] px-4 py-2 z-20 text-[9px] font-bold uppercase">{{ 'NAV.BUS_DESIGN' | translate }}</div>
         <div class="absolute inset-0 flex flex-col justify-end p-6 bg-gradient-to-t from-black z-10">
-          <h3 class="text-lg font-bold uppercase">PORT BAGAJ SİSTEMLERİ</h3>
+          <h3 class="text-lg font-bold uppercase">{{ 'SERVICES_OVERVIEW.LUGGAGE_SYSTEMS' | translate }}</h3>
         </div>
       </div>
 
     </div>
     
     <div class="mt-8 md:hidden text-center">
-      <button class="w-full py-4 bg-[#ff0000] text-xs font-black tracking-widest uppercase text-white shadow-xl">TÜM HİZMETLERİ GÖR</button>
+      <button class="w-full py-4 bg-[#ff0000] text-xs font-black tracking-widest uppercase text-white shadow-xl">
+        {{ 'SERVICES_OVERVIEW.MOBILE_ALL_SERVICES' | translate }}
+      </button>
     </div>
 
   </div>

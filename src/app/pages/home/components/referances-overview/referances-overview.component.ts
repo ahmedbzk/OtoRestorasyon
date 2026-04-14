@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { LucideAngularModule } from 'lucide-angular';
+import { TranslateModule } from '@ngx-translate/core'; 
 
 @Component({
   selector: 'app-referances-overview',
   standalone: true,
-  imports: [LucideAngularModule,CommonModule],
+  imports: [LucideAngularModule,CommonModule,TranslateModule,],
   templateUrl: './referances-overview.component.html',
   styleUrl: './referances-overview.component.scss'
 })

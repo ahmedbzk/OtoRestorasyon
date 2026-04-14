@@ -19,5 +19,4 @@ import { LucideAngularModule } from 'lucide-angular';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  // Splash mantığı artık index.html içinde olduğu için burası tertemiz!
 }

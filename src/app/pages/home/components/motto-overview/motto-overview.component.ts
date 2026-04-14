@@ -1,11 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { LucideAngularModule } from 'lucide-angular';
 
 @Component({
   selector: 'app-motto-overview',
   standalone: true,
-  imports: [LucideAngularModule,CommonModule],
+  imports: [LucideAngularModule,CommonModule,TranslateModule],
   templateUrl: './motto-overview.component.html',
   styleUrl: './motto-overview.component.scss'
 })

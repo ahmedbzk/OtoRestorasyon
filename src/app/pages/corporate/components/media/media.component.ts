@@ -1,30 +1,28 @@
 import { Component, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
-import { isPlatformBrowser, CommonModule } from '@angular/common'; // CommonModule *ngFor için şart
+import { isPlatformBrowser, CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core'; 
 
 @Component({
   selector: 'app-media',
   standalone: true,
-  imports: [CommonModule], // Buraya CommonModule eklediğinden emin ol
+  imports: [CommonModule, TranslateModule],
   templateUrl: './media.component.html',
   styleUrl: './media.component.scss'
 })
 export class MediaComponent implements AfterViewInit {
 
-  // TİKTOK LİNKLERİNİ BURAYA EKLE
-  // 'id' kısmına videonun URL'sindeki son rakamları yapıştır.
   videos = [
-    { id: '7389714216653032712', desc: 'Mercedes Tourismo VIP Restorasyon çalışmamız.' },
-    { id: '7207054171122437382', desc: 'İç mekan detayları ve özel işçilik.' },
-    { id: '7273992921982995718', desc: 'Çalışmalarımıza Göz Atın.' },
-    { id: '7231685759646862597', desc: 'Göz Alıcı Dönüşümler' },
-    { id: '7126635137185484034', desc: 'Otobüs Dizaynı' },
-    { id: '7067043602316250370', desc: 'İç Tasarım Ferahlığı' }
+    { id: '7389714216653032712', desc: 'MEDIA.VIDEO1_DESC' },
+    { id: '7207054171122437382', desc: 'MEDIA.VIDEO2_DESC' },
+    { id: '7273992921982995718', desc: 'MEDIA.VIDEO3_DESC' },
+    { id: '7231685759646862597', desc: 'MEDIA.VIDEO4_DESC' },
+    { id: '7126635137185484034', desc: 'MEDIA.VIDEO5_DESC' },
+    { id: '7067043602316250370', desc: 'MEDIA.VIDEO6_DESC' }
   ];
 
   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
 
   ngAfterViewInit() {
-    // Sadece tarayıcıda çalışması için bu kontrol ŞART
     if (isPlatformBrowser(this.platformId)) {
       this.loadTikTokScript();
     }

@@ -1,4 +1,5 @@
-<section class="py-24 bg-white"> <div class="container mx-auto px-6 md:px-12">
+<section class="py-24 bg-white"> 
+  <div class="container mx-auto px-6 md:px-12">
     <div class="flex flex-col lg:flex-row items-center gap-16">
       
       <div class="w-full lg:w-1/2 relative group">
@@ -14,25 +15,24 @@
      
       <div class="w-full lg:w-1/2 space-y-8">
         <div class="space-y-4">
-          <h4 class="text-[#00adef] text-xs font-black tracking-[0.4em] uppercase">BİZ KİMİZ?</h4>
+          <h4 class="text-[#00adef] text-xs font-black tracking-[0.4em] uppercase">{{ 'ABOUT_OVERVIEW.TITLE_TOP' | translate }}</h4>
           <h2 class="text-3xl md:text-5xl font-light leading-tight text-black uppercase tracking-tighter">
-            Yıldızın Hikayesini <br> <span class="font-black italic">Yeniden Yazıyoruz</span>
+            {{ 'ABOUT_OVERVIEW.TITLE_MAIN_1' | translate }} <br> <span class="font-black italic">{{ 'ABOUT_OVERVIEW.TITLE_MAIN_2' | translate }}</span>
           </h2>
         </div>
 
         <div class="text-gray-600 leading-relaxed space-y-4 font-light text-lg">
           <p>
-            Otomobillerimiz modern dünyanın vazgeçilmez araçlarıdır. Mesafeleri kısaltan, hayatımızın önemli bir bölümünü geçirdiğimiz 
-            mobil evlerin içinde olduğumuz gibi hissettiren destinasyonlarımıza güvenle ve huzurla yolculuk yapmak kulağa çok hoş geliyor...
+            {{ 'ABOUT_OVERVIEW.PARA1' | translate }}
           </p>
           <p class="hidden md:block">
-            Araç bakımında dikkat çekmek önemlidir. Araç alırken birçok şeyi göz önünde bulunduruyoruz. En belirleyici iki faktör; bütçemiz ve ihtiyaçlarımızdır...
+            {{ 'ABOUT_OVERVIEW.PARA2' | translate }}
           </p>
         </div>
 
         <div class="pt-4">
           <button [routerLink]="['/corporate/about']" class="group flex items-center gap-4 text-xs font-black tracking-[0.2em] uppercase text-black hover:text-[#00adef] transition-colors">
-            Devamını Oku...
+            {{ 'ABOUT_OVERVIEW.READ_MORE' | translate }}
             <div class="w-12 h-[1px] bg-black/20 group-hover:w-20 group-hover:bg-[#00adef] transition-all duration-500"></div>
             <lucide-icon name="arrow-right" size="16"></lucide-icon>
           </button>

@@ -10,7 +10,6 @@ input, textarea {
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
 }
 
-// VIP Cam Efekti
 .bg-black {
   background: linear-gradient(135deg, #111 0%, #000 100%);
 }
@@ -30,7 +29,6 @@ input, textarea {
   }
 }
 
-// Form butonunun gönderim sırasında donmaması için
 button:disabled {
   cursor: not-allowed;
   filter: grayscale(1);

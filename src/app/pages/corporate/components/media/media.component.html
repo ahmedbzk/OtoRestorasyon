@@ -2,8 +2,8 @@
   <div class="container mx-auto px-6">
     
     <div class="border-l-4 border-[#ff0000] pl-6 mb-16">
-      <h2 class="text-3xl font-black text-black uppercase tracking-tighter">VİDEOLARIMIZ</h2>
-      <p class="text-[#00adef] font-bold text-sm tracking-widest uppercase mt-1">En Güzel Dönüşümler</p>
+      <h2 class="text-3xl font-black text-black uppercase tracking-tighter">{{ 'MEDIA.TITLE' | translate }}</h2>
+      <p class="text-[#00adef] font-bold text-sm tracking-widest uppercase mt-1">{{ 'MEDIA.SUBTITLE' | translate }}</p>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-6xl mx-auto">
@@ -22,7 +22,7 @@
         </div>
         
         <p class="text-gray-600 text-[12px] font-semibold italic border-l-2 border-[#00adef] pl-3 py-1 leading-tight">
-          {{ video.desc }}
+          {{ video.desc | translate }}
         </p>
       </div>
 
