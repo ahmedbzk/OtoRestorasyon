@@ -77,7 +77,7 @@
 
       <ul class="flex-1 p-8 space-y-2 font-black tracking-widest uppercase text-[11px] overflow-y-auto">
         <li>
-          <a routerLink="/" (click)="isMenuOpen = false" class="flex items-center gap-4 py-5 border-b border-gray-200/50 hover:text-[#00adef] transition-all">
+          <a routerLink="/" (click)="isMenuOpen = false" class="flex items-center gap-4 py-5 text-white border-b border-gray-200/50 hover:text-[#00adef] transition-all">
             <lucide-icon name="home" size="22"></lucide-icon> {{ 'NAV.HOME' | translate }}
           </a>
         </li>
@@ -85,13 +85,13 @@
         <li>
           <details class="group">
             <summary class="list-none py-5 border-b border-gray-200/50 flex justify-between items-center cursor-pointer hover:text-[#00adef] transition-all">
-              <span class="flex items-center gap-4"><lucide-icon name="building2" size="22"></lucide-icon> {{ 'NAV.CORPORATE' | translate }}</span>
+              <span class="flex items-center gap-4 text-white"><lucide-icon name="building2" size="22"></lucide-icon> {{ 'NAV.CORPORATE' | translate }}</span>
               <lucide-icon name="chevron-down" size="18" class="group-open:rotate-180 transition-transform duration-500"></lucide-icon>
             </summary>
             <ul class="pl-12 pt-4 space-y-5 text-gray-400 font-black text-[10px]">
-              <li><a routerLink="/corporate/about" (click)="isMenuOpen = false" class="hover:text-black">{{ 'NAV.ABOUT_US' | translate }}</a></li>
-              <li><a routerLink="/corporate/media" (click)="isMenuOpen = false" class="hover:text-black">{{ 'NAV.MEDIA' | translate }}</a></li>
-              <li><a routerLink="/corporate/sss" (click)="isMenuOpen = false" class="hover:text-black">{{ 'NAV.FAQ' | translate }}</a></li>
+              <li><a routerLink="/corporate/about" (click)="isMenuOpen = false" class="hover:text-black text-white">{{ 'NAV.ABOUT_US' | translate }}</a></li>
+              <li><a routerLink="/corporate/media" (click)="isMenuOpen = false" class="hover:text-black text-white">{{ 'NAV.MEDIA' | translate }}</a></li>
+              <li><a routerLink="/corporate/sss" (click)="isMenuOpen = false" class="hover:text-black text-white">{{ 'NAV.FAQ' | translate }}</a></li>
             </ul>
           </details>
         </li>
@@ -99,22 +99,22 @@
         <li>
           <details class="group">
             <summary class="list-none py-5 border-b border-gray-200/50 flex justify-between items-center cursor-pointer hover:text-[#00adef] transition-all">
-              <span class="flex items-center gap-4"><lucide-icon name="car" size="22"></lucide-icon> {{ 'NAV.SERVICES' | translate }}</span>
+              <span class="flex items-center gap-4 text-white"><lucide-icon name="car" size="22"></lucide-icon> {{ 'NAV.SERVICES' | translate }}</span>
               <lucide-icon name="chevron-down" size="18" class="group-open:rotate-180 transition-transform duration-500"></lucide-icon>
             </summary>
             <ul class="pl-12 pt-4 space-y-5 text-gray-400 font-black text-[10px]">
-              <li><a routerLink="/services/vip-design" (click)="isMenuOpen = false" class="hover:text-black">{{ 'NAV.VIP_DESIGN' | translate }}</a></li>
-              <li><a routerLink="/services/bus-design" (click)="isMenuOpen = false" class="hover:text-black">{{ 'NAV.BUS_DESIGN' | translate }}</a></li>
+              <li><a routerLink="/services/vip-design" (click)="isMenuOpen = false" class="hover:text-black text-white">{{ 'NAV.VIP_DESIGN' | translate }}</a></li>
+              <li><a routerLink="/services/bus-design" (click)="isMenuOpen = false" class="hover:text-black text-white">{{ 'NAV.BUS_DESIGN' | translate }}</a></li>
             </ul>
           </details>
         </li>
 
-        <li><a routerLink="/spare-parts" (click)="isMenuOpen = false" class="flex items-center gap-4 py-5 border-b border-gray-200/50 hover:text-[#00adef] transition-all"><lucide-icon name="wrench" size="22"></lucide-icon> {{ 'NAV.SPARE_PARTS' | translate }}</a></li>
-        <li><a routerLink="/contact" (click)="isMenuOpen = false" class="flex items-center gap-4 py-5 border-b border-gray-200/50 hover:text-[#00adef] transition-all"><lucide-icon name="phone-call" size="22"></lucide-icon> {{ 'NAV.CONTACT' | translate }}</a></li>
+        <li><a routerLink="/spare-parts" (click)="isMenuOpen = false" class="flex items-center gap-4 py-5 border-b border-gray-200/50 hover:text-[#00adef] transition-all text-white"><lucide-icon name="wrench" size="22"></lucide-icon> {{ 'NAV.SPARE_PARTS' | translate }}</a></li>
+        <li><a routerLink="/contact" (click)="isMenuOpen = false" class="flex items-center gap-4 py-5 border-b border-gray-200/50 hover:text-[#00adef] transition-all text-white"><lucide-icon name="phone-call" size="22"></lucide-icon> {{ 'NAV.CONTACT' | translate }}</a></li>
       </ul>
 
       <div class="p-6 border-t border-gray-800 mt-auto relative z-[100001] pointer-events-auto" style="background-color: #1a1b1c;">
-        <span class="text-[10px] font-black text-gray-400 tracking-[0.3em] mb-4 block uppercase">{{ 'NAV.LANG_SELECT' | translate }}</span>
+        <span class="text-[10px] font-black text-gray-400 tracking-[0.3em] mb-4 block uppercase ">{{ 'NAV.LANG_SELECT' | translate }}</span>
         <div class="flex justify-between items-center gap-3">
           <button (click)="setLanguage('TR')" class="flex-1 flex flex-col items-center gap-2 p-3 rounded-2xl transition-all duration-300" [ngClass]="currentLang === 'TR' ? 'bg-white shadow-xl scale-110 opacity-100 ring-2 ring-[#00adef]' : 'bg-gray-800/50 opacity-40'">
             <img src="assets/flags/turkey.png" class="w-10 h-10 rounded-full border border-gray-700 shadow-sm">
