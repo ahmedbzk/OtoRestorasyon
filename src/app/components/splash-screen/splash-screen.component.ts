@@ -16,6 +16,6 @@ isVisible = true;
     setTimeout(() => {
       this.isVisible = false;
       this.destroyed.emit(); 
-    }, 3000); //
+    }, 3000);
   }
 }

@@ -168,7 +168,11 @@
     "TOAST_SUCCESS_MSG": "Mesajınız Başarıyla İletildi!",
     "TOAST_ERROR_HEAD": "HATA",
     "TOAST_ERROR_MSG": "Bir sorun oluştu!",
-    "TOAST_CONN_ERROR": "Sunucuya Bağlanılamadı!"
+    "TOAST_CONN_ERROR": "Sunucuya Bağlanılamadı!",
+    "VAL_NAME": "* Zorunlu alan (Min 3 karakter)",
+    "VAL_EMAIL": "* Geçerli bir e-posta giriniz",
+    "VAL_SUBJECT": "* Konu boş bırakılamaz",
+    "VAL_MESSAGE": "* Mesaj alanı zorunludur (Min 10 karakter)"
   },
   "VIP_DESIGN": {
     "SEGMENTS_TITLE": "TASARIM SEGMENTLERİ",
@@ -225,21 +229,53 @@
     "STORAGE_FEAT_4": "Kilitli Bölme Seçenekleri"
   },
   "SEO": {
-  "HOME_TITLE": "Anasayfa | VIP Tasarım & Restorasyon",
-  "HOME_DESC": "Araçlarınız için profesyonel VIP tasarım, otobüs dizaynı ve orijinal yedek parça çözümleri. 15 yıllık tecrübe ile hizmetinizdeyiz.",
-  "ABOUT_TITLE": "Hakkımızda | VIP Araç Dizayn ve Restorasyon Uzmanları",
-  "ABOUT_DESC": "Araç restorasyonu ve VIP araç tasarımında öncü kuruluş. Uzman ekibimiz ve kaliteli işçiliğimizle tanışın.",
-  "MEDIA_TITLE": "Medya İçerikleri | VIP Tasarım & Restorasyon - Videolarımız ve Güncel Çalışmalarımız",
-  "MEDIA_DESC": "VIP dönüşüm ve otobüs dizayn projelerimizin videolarını ve en güncel çalışmalarımızı buradan inceleyin.",
-  "FAQ_TITLE": "S.S.S | VIP Tasarım & Restorasyon - Sıkça Sorulan Sorular",
-  "FAQ_DESC": "VIP araç tasarımı, restorasyon süreci ve orijinal parça garantisi hakkında merak ettiğiniz tüm soruların cevapları.",
-  "VIP_TITLE": "VIP Dizayn | VIP Tasarım & Restorasyon - Kişiye Özel Lüks Araçlar",
-  "VIP_DESC": "Lüks ve konforu bir arada sunan VIP araç tasarım segmentlerimiz. Luxury, Economy ve Ticari çözümlerle aracınızı baştan yaratın.",
-  "BUS_TITLE": "Otobüs Dizayn | VIP Tasarım & Restorasyon - Modern İç Mekan Çözümleri",
-  "BUS_DESC": "Otobüsler için multimedya sistemleri, koltuk döşeme ve akıllı depolama çözümleri. Konforlu yolculuklar için tasarım.",
-  "PARTS_TITLE": "Yedek Parçalar | VIP Tasarım & Restorasyon - Orijinal Parça Bileşenleri",
-  "PARTS_DESC": "Hava aksamı, mekanik parçalar ve aksesuar korna setleri. En kaliteli yedek parçaları kataloğumuz.",
-  "CONTACT_TITLE": "İletişim | VIP Tasarım & Restorasyon - Bize Ulaşın",
-  "CONTACT_DESC": "Atölye adresimiz, telefon numaralarımız ve WhatsApp hattımız. VIP tasarım projeleriniz için hemen teklif alın."
-}
+    "HOME_TITLE": "Anasayfa | VIP Tasarım & Restorasyon",
+    "HOME_DESC": "Araçlarınız için profesyonel VIP tasarım, otobüs dizaynı ve orijinal yedek parça çözümleri. 15 yıllık tecrübe ile hizmetinizdeyiz.",
+    "ABOUT_TITLE": "Hakkımızda | VIP Araç Dizayn ve Restorasyon Uzmanları",
+    "ABOUT_DESC": "Araç restorasyonu ve VIP araç tasarımında öncü kuruluş. Uzman ekibimiz ve kaliteli işçiliğimizle tanışın.",
+    "MEDIA_TITLE": "Medya İçerikleri | VIP Tasarım & Restorasyon - Videolarımız ve Güncel Çalışmalarımız",
+    "MEDIA_DESC": "VIP dönüşüm ve otobüs dizayn projelerimizin videolarını ve en güncel çalışmalarımızı buradan inceleyin.",
+    "FAQ_TITLE": "S.S.S | VIP Tasarım & Restorasyon - Sıkça Sorulan Sorular",
+    "FAQ_DESC": "VIP araç tasarımı, restorasyon süreci ve orijinal parça garantisi hakkında merak ettiğiniz tüm soruların cevapları.",
+    "VIP_TITLE": "VIP Dizayn | VIP Tasarım & Restorasyon - Kişiye Özel Lüks Araçlar",
+    "VIP_DESC": "Lüks ve konforu bir arada sunan VIP araç tasarım segmentlerimiz. Luxury, Economy ve Ticari çözümlerle aracınızı baştan yaratın.",
+    "BUS_TITLE": "Otobüs Dizayn | VIP Tasarım & Restorasyon - Modern İç Mekan Çözümleri",
+    "BUS_DESC": "Otobüsler için multimedya sistemleri, koltuk döşeme ve akıllı depolama çözümleri. Konforlu yolculuklar için tasarım.",
+    "PARTS_TITLE": "Yedek Parçalar | VIP Tasarım & Restorasyon - Orijinal Parça Bileşenleri",
+    "PARTS_DESC": "Hava aksamı, mekanik parçalar ve aksesuar korna setleri. En kaliteli yedek parçaları kataloğumuz.",
+    "CONTACT_TITLE": "İletişim | VIP Tasarım & Restorasyon - Bize Ulaşın",
+    "CONTACT_DESC": "Atölye adresimiz, telefon numaralarımız ve WhatsApp hattımız. VIP tasarım projeleriniz için hemen teklif alın."
+  },
+  "NOT_FOUND": {
+    "TITLE": "404",
+    "HEADING": "SAYFA BULUNAMADI",
+    "MESSAGE": "Aradığınız sayfaya ulaşılamıyor. Belki de bu sayfa restorasyon sürecindedir veya adresi yanlış tuşladınız.",
+    "BACK_BUTTON": "ANASAYFAYA DÖN",
+    "TITLE_SEO": "404 Sayfa Bulunamadı",
+    "DESC_SEO": "Aradığınız sayfaya ulaşılamıyor. Belki de bu sayfa restorasyon sürecindedir."
+  },
+  "PRIVACY_POLICY": {
+    "TITLE_1": "GİZLİLİK",
+    "TITLE_2": "POLİTİKASI",
+    "P1": "(www.reconditionareautocare.ro) olarak, kullanıcılarımızın hizmetlerimizden güvenli ve eksiksiz şekilde faydalanmalarını sağlamak amacıyla sitemizi kullanan üyelerimizin gizliliğini korumak için çalışıyoruz. Bu doğrultuda, işbu www.reconditionareautocare.ro Gizlilik Politikası (“Politika”), üyelerimizin kişisel verilerinin 6698 sayılı Kişisel Verilerin Korunması Kanunu (“Kanun”) ile tamamen uyumlu bir şekilde işlenmesi ve kullanıcılarımızı bu bağlamda bilgilendirmek amacıyla hazırlanmıştır. www.reconditionareautocare.ro çerez politikası İşbu Politika’nın ayrılmaz parçasıdır.",
+    "P2": "İşbu Politika’nın amacı, www.reconditionareautocare.ro tarafından işletilmekte olan www.reconditionareautocare.ro internet sitesi ile mobil uygulamanın (hepsi birlikte “www.reconditionareautocare.ro” olarak anılacaktır) işletilmesi sırasında www.reconditionareautocare.ro üyeleri/ziyaretçileri/kullanıcıları (hepsi birlikte “Veri Sahibi” olarak anılacaktır) tarafından www.reconditionareautocare.ro ile paylaşılan veya www.reconditionareautocare.ro’un Veri Sahibi’nin www.reconditionareautocare.ro’u kullanımı sırasında ürettiği kişisel verilerin kullanımına ilişkin koşul ve şartları tespit etmektir.",
+    "H1": "Hangi Veriler İşlenmektedir?",
+    "H1_P1": "Aşağıda www.reconditionareautocare.ro tarafından işlenen ve Kanun uyarınca kişisel veri sayılan verilerin hangileri olduğu sıralanmıştır. Aksi açıkça belirtilmedikçe, işbu Politika kapsamında arz edilen hüküm ve koşullar kapsamında “kişisel veri” ifadesi aşağıda yer alan bilgileri kapsayacaktır.",
+    "L1": "• Kimlik Bilgisi",
+    "L2": "• İletişim Bilgisi",
+    "L3": "• Kullanıcı Bilgisi",
+    "L4": "• Kullanıcı İşlem Bilgisi",
+    "L5": "• İşlem Güvenliği Bilgisi",
+    "L6": "• Finansal Bilgi",
+    "L7": "• Pazarlama Bilgisi",
+    "L8": "• Talep/Şikayet Yönetimi Bilgisi",
+    "H1_P2": "Kişisel Verilerin Korunması Kanunu’nun 3. ve 7. maddeleri dairesince, geri döndürülemeyecek şekilde anonim hale getirilen veriler, anılan kanun hükümleri uyarınca kişisel veri olarak kabul edilmeyecek ve bu verilere ilişkin işleme faaliyetleri işbu Politika hükümleri ile bağlı olmaksızın gerçekleştirecektir.",
+    "H2": "Kişisel Veri İşleme Amaçları",
+    "H2_P1": "www.reconditionareautocare.ro, Veri Sahibi tarafından sağlanan kişisel verileri, üyelik kaydı ve hesabının oluşturulması ve buna ilişkin kayıtların tutulması, Veri Sahibi’nin www.reconditionareautocare.ro üzerinden sağlanan hizmetlerden faydalandırılması sistem hatalarının tespit edilerek performans takibinin yapılması ve www.reconditionareautocare.ro’un işleyişinin iyileştirilmesi, bakım ve destek hizmetleri ile yedekleme hizmetlerinin sunulması amaçları dahil olmak üzere www.reconditionareautocare.ro tarafından sunulan ürün ve hizmetlerden ilgili kişileri faydalandırmak için gerekli çalışmaların iş birimleri tarafından yapılması ve ilgili iş süreçlerinin yürütülmesi ile bu ürün ve hizmetlerin ilgili kişilerin beğeni, kullanım alışkanlıkları ve ihtiyaçlarına göre özelleştirilerek ilgili kişilere önerilmesi ve tanıtılması için gerekli olan aktivitelerin planlanması ve icrası, www.reconditionareautocare.ro tarafından yürütülen ticari faaliyetlerin gerçekleştirilmesi için ilgili iş birimleri tarafından gerekli çalışmaların yapılması ve buna bağlı iş süreçlerinin yürütülmesi, www.reconditionareautocare.ro ve iş ilişkisi içerisinde bulunduğu kişilerin hukuki, teknik ve ticari-iş güvenliğinin temini ile www.reconditionareautocare.ro’un ticari ve/veya iş stratejilerinin planlanması ve icrası amaçlarıyla işlenebilecektir.",
+    "H3": "Veri Sahiplerinin Açık Rızası Doğrultusunda İşlenecek Kişisel Veriler ve İşleme Amaçları",
+    "H3_P1": "Veri Sahibi’nin açık rızası kapsamında, www.reconditionareautocare.ro, Veri Sahipleri’nin www.reconditionareautocare.ro üzerindeki hareketlerini takip ederek kullanıcı deneyiminin artırılması, istatistik oluşturulması, profilleme yapılması, doğrudan pazarlama ve yeniden pazarlama, Veri Sahibi’ne özel promosyon önerilerinin oluşturulması ve Veri Sahibi’ne iletilmesi ve bu kapsamda elde edilen verilerin her türlü reklam ve materyal içeriğinde kullanılması amacıyla veri işleyebilecek ve aşağıda anılan taraflarla bu verileri paylaşabilecektir.",
+    "H4": "Kişisel Verilerin Aktarımı",
+    "H4_P1": "www.reconditionareautocare.ro, Veri Sahibi’ne ait kişisel verileri ve bu kişisel verileri kullanılarak elde ettiği yeni verileri, işbu Gizlilik Politikası ile belirlenen amaçların gerçekleştirilebilmesi için www.reconditionareautocare.ro’un hizmetlerinden faydalandığı üçüncü kişilere, söz konusu hizmetlerin temini amacıyla sınırlı olmak üzere aktarılabilecektir.",
+    "H4_P2": "www.reconditionareautocare.ro, Veri Sahibi deneyiminin geliştirilmesi (iyileştirme ve kişiselleştirme dâhil), Veri Sahibi’nin güvenliğini sağlamak, hileli ya da izinsiz kullanımları tespit etmek, operasyonel değerlendirme araştırılması, www.reconditionareautocare.ro hizmetlerine ilişkin hataların giderilmesi ve işbu Gizlilik Politikası’nda yer alan amaçlardan herhangi birisini gerçekleştirebilmek için SMS gönderimi yapanlar da dahil olmak üzere dış kaynak hizmet sağlayıcıları, barındırma hizmet sağlayıcıları (hosting servisleri), hukuk büroları, araştırma şirketleri, çağrı merkezleri gibi üçüncü kişiler ile paylaşabilecektir."
+  }
 }

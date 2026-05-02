@@ -48,7 +48,6 @@ export class ContactComponent implements OnInit {
         }
       },
       error: (err) => {
-        console.error('Network Hatası:', err);
         this.displayToast('error', 'CONTACT.TOAST_CONN_ERROR'); 
       }
     });

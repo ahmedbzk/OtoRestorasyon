@@ -10,6 +10,7 @@ import { BusDesignComponent } from './pages/services/components/bus-design/bus-d
 import { VipDesignComponent } from './pages/services/components/vip-design/vip-design.component';
 import { SparePartsComponent } from './pages/spare-parts/spare-parts.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent }, 
@@ -39,5 +40,5 @@ export const routes: Routes = [
 
   { path: 'privacy-policy', component: PrivacyPolicyComponent },
 
-  { path: '**', redirectTo: '' } 
+  { path: '**', component: NotFoundComponent } 
 ];

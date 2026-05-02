@@ -168,7 +168,11 @@
     "TOAST_SUCCESS_MSG": "Mesajul tău a fost trimis cu succes!",
     "TOAST_ERROR_HEAD": "EROARE",
     "TOAST_ERROR_MSG": "A apărut o problemă!",
-    "TOAST_CONN_ERROR": "Nu s-a putut conecta la server!"
+    "TOAST_CONN_ERROR": "Nu s-a putut conecta la server!",
+    "VAL_NAME": "* Câmp obligatoriu (Min 3 caractere)",
+    "VAL_EMAIL": "* Vă rugăm să introduceți un e-mail valid",
+    "VAL_SUBJECT": "* Subiectul nu poate fi gol",
+    "VAL_MESSAGE": "* Câmpul mesaj este obligatoriu (Min 10 caractere)"
   },
   "VIP_DESIGN": {
     "SEGMENTS_TITLE": "SEGMENTE DE DESIGN",
@@ -225,21 +229,53 @@
     "STORAGE_FEAT_4": "Opțiuni de Compartiment cu Blocare"
   },
   "SEO": {
-  "HOME_TITLE": "Acasă | Design VIP & Restaurare",
-  "HOME_DESC": "Soluții profesionale de design VIP, design de autobuze și piese de schimb originale pentru vehiculele dumneavoastră. La dispoziția dumneavoastră cu 15 ani de experiență.",
-  "ABOUT_TITLE": "Despre Noi | Specialiști în Design și Restaurare Vehicule VIP",
-  "ABOUT_DESC": "O companie lider în restaurarea auto și designul vehiculelor VIP. Faceți cunoștință cu echipa noastră de experți și măiestria de înaltă calitate.",
-  "MEDIA_TITLE": "Conținut Media | Design VIP & Restaurare - Videoclipurile și Proiectele Noastre",
-  "MEDIA_DESC": "Răsfoiți aici videoclipurile proiectelor noastre de conversie VIP și design de autobuze, precum și cele mai recente lucrări.",
-  "FAQ_TITLE": "Întrebări Frecvente | Design VIP & Restaurare - Întrebări frecvente",
-  "FAQ_DESC": "Răspunsuri la toate întrebările pe care le aveți despre procesul de design și restaurare a vehiculelor VIP și garanția pieselor originale.",
-  "VIP_TITLE": "Design VIP | Design VIP & Restaurare - Vehicule de lux personalizate",
-  "VIP_DESC": "Segmentele noastre de design pentru vehicule VIP oferă lux și confort împreună. Recreați-vă vehiculul cu soluții Luxury, Economy și Comerciale.",
-  "BUS_TITLE": "Design Autobuz | Design VIP & Restaurare - Soluții moderne de interior",
-  "BUS_DESC": "Sisteme multimedia, tapițerie pentru scaune și soluții inteligente de depozitare pentru autobuze. Proiectat pentru călătorii confortabile.",
-  "PARTS_TITLE": "Piese Auto | Design VIP & Restaurare - Componente originale",
-  "PARTS_DESC": "Componente de aer, piese mecanice și seturi de claxoane accesorii. Catalogul nostru de piese de schimb de cea mai înaltă calitate.",
-  "CONTACT_TITLE": "Contact | Design VIP & Restaurare - Contactați-ne",
-  "CONTACT_DESC": "Adresa atelierului nostru, numerele de telefon și linia WhatsApp. Obțineți o ofertă acum pentru proiectele dumneavoastră de design VIP."
-}
+    "HOME_TITLE": "Acasă | Design VIP & Restaurare",
+    "HOME_DESC": "Soluții profesionale de design VIP, design de autobuze și piese de schimb originale pentru vehiculele dumneavoastră. La dispoziția dumneavoastră cu 15 ani de experiență.",
+    "ABOUT_TITLE": "Despre Noi | Specialiști în Design și Restaurare Vehicule VIP",
+    "ABOUT_DESC": "O companie lider în restaurarea auto și designul vehiculelor VIP. Faceți cunoștință cu echipa noastră de experți și măiestria de înaltă calitate.",
+    "MEDIA_TITLE": "Conținut Media | Design VIP & Restaurare - Videoclipurile și Proiectele Noastre",
+    "MEDIA_DESC": "Răsfoiți aici videoclipurile proiectelor noastre de conversie VIP și design de autobuze, precum și cele mai recente lucrări.",
+    "FAQ_TITLE": "Întrebări Frecvente | Design VIP & Restaurare - Întrebări frecvente",
+    "FAQ_DESC": "Răspunsuri la toate întrebările pe care le aveți despre procesul de design și restaurare a vehiculelor VIP și garanția pieselor originale.",
+    "VIP_TITLE": "Design VIP | Design VIP & Restaurare - Vehicule de lux personalizate",
+    "VIP_DESC": "Segmentele noastre de design pentru vehicule VIP oferă lux și confort împreună. Recreați-vă vehiculul cu soluții Luxury, Economy și Comerciale.",
+    "BUS_TITLE": "Design Autobuz | Design VIP & Restaurare - Soluții moderne de interior",
+    "BUS_DESC": "Sisteme multimedia, tapițerie pentru scaune și soluții inteligente de depozitare pentru autobuze. Proiectat pentru călătorii confortabile.",
+    "PARTS_TITLE": "Piese Auto | Design VIP & Restaurare - Componente originale",
+    "PARTS_DESC": "Componente de aer, piese mecanice și seturi de claxoane accesorii. Catalogul nostru de piese de schimb de cea mai înaltă calitate.",
+    "CONTACT_TITLE": "Contact | Design VIP & Restaurare - Contactați-ne",
+    "CONTACT_DESC": "Adresa atelierului nostru, numerele de telefon și linia WhatsApp. Obțineți o ofertă acum pentru proiectele dumneavoastră de design VIP."
+  },
+  "NOT_FOUND": {
+    "TITLE": "404",
+    "HEADING": "PAGINA NU A FOST GĂSITĂ",
+    "MESSAGE": "Pagina pe care o căutați nu a putut fi găsită. Este posibil să fie în proces de restaurare sau ați introdus adresa greșită.",
+    "BACK_BUTTON": "ÎNTOARCE-TE ACASĂ",
+    "TITLE_SEO": "404 Pagina nu a fost găsită",
+    "DESC_SEO": "Pagina pe care o căutați nu a putut fi găsită."
+  },
+  "PRIVACY_POLICY": {
+    "TITLE_1": "POLITICA DE",
+    "TITLE_2": "CONFIDENȚIALITATE",
+    "P1": "În calitate de (www.reconditionareautocare.ro), ne străduim să protejăm confidențialitatea membrilor noștri care utilizează site-ul nostru, pentru a ne asigura că utilizatorii noștri pot beneficia în mod sigur și complet de serviciile noastre. În consecință, această Politică de Confidențialitate www.reconditionareautocare.ro („Politica”) a fost pregătită pentru a procesa datele personale ale membrilor noștri în conformitate deplină cu Legea privind Protecția Datelor cu Caracter Personal Nr. 6698 („Legea”) și pentru a ne informa utilizatorii în acest context. Politica privind modulele cookie a www.reconditionareautocare.ro este o parte integrantă a acestei Politici.",
+    "P2": "Scopul acestei Politici este de a determina termenii și condițiile privind utilizarea datelor cu caracter personal partajate cu www.reconditionareautocare.ro de către membrii/vizitatorii/utilizatorii www.reconditionareautocare.ro (denumiți colectiv „Persoana Vizată”) în timpul funcționării site-ului web și a aplicației mobile www.reconditionareautocare.ro (denumite colectiv „www.reconditionareautocare.ro”), sau produse de www.reconditionareautocare.ro în timpul utilizării www.reconditionareautocare.ro de către Persoana Vizată.",
+    "H1": "Ce Date Sunt Prelucrate?",
+    "H1_P1": "Următoarele enumeră datele prelucrate de www.reconditionareautocare.ro și considerate date cu caracter personal în conformitate cu Legea. Cu excepția cazului în care se menționează în mod explicit altfel, termenul „date cu caracter personal” în termenii și condițiile prevăzute în această Politică va include informațiile de mai jos.",
+    "L1": "• Informații de Identitate",
+    "L2": "• Informații de Contact",
+    "L3": "• Informații Despre Utilizator",
+    "L4": "• Informații Despre Tranzacțiile Utilizatorului",
+    "L5": "• Informații Privind Securitatea Tranzacțiilor",
+    "L6": "• Informații Financiare",
+    "L7": "• Informații de Marketing",
+    "L8": "• Informații Despre Gestionarea Cererilor/Reclamațiilor",
+    "H1_P2": "În conformitate cu articolele 3 și 7 din Legea privind Protecția Datelor cu Caracter Personal, datele care sunt anonimizate ireversibil nu vor fi considerate date cu caracter personal conform prevederilor legii respective, iar activitățile de prelucrare a acestor date vor fi desfășurate indiferent de prevederile acestei Politici.",
+    "H2": "Scopurile Prelucrării Datelor Cu Caracter Personal",
+    "H2_P1": "www.reconditionareautocare.ro va prelucra datele cu caracter personal furnizate de Persoana Vizată pentru a crea o înregistrare și un cont de membru și a păstra înregistrările aferente, pentru a permite Persoanei Vizate să beneficieze de serviciile furnizate prin www.reconditionareautocare.ro, pentru a detecta erorile de sistem, pentru a urmări performanța și a îmbunătăți funcționarea www.reconditionareautocare.ro, inclusiv în scopul furnizării serviciilor de întreținere și asistență și a serviciilor de backup, pentru a desfășura activitățile necesare de către unitățile de afaceri pentru a permite persoanelor vizate să beneficieze de produsele și serviciile oferite de www.reconditionareautocare.ro, pentru a personaliza aceste produse și servicii în funcție de gusturile, obiceiurile de utilizare și nevoile persoanelor vizate și a le recomanda, pentru a planifica și executa activitățile necesare în acest scop, pentru a desfășura activitățile comerciale desfășurate de www.reconditionareautocare.ro de către unitățile de afaceri relevante și a executa procesele de afaceri aferente, pentru a asigura siguranța legală, tehnică și comercial-ocupațională a www.reconditionareautocare.ro și a persoanelor cu care are o relație de afaceri, și pentru a planifica și executa strategiile comerciale și/sau de afaceri ale www.reconditionareautocare.ro.",
+    "H3": "Date cu Caracter Personal care Urmează a fi Prelucrate în Conformitate cu Consimțământul Explicit al Persoanelor Vizate și Scopurile Prelucrării",
+    "H3_P1": "În limitele consimțământului explicit al Persoanei Vizate, www.reconditionareautocare.ro poate prelucra date prin urmărirea mișcărilor Persoanelor Vizate pe www.reconditionareautocare.ro pentru a îmbunătăți experiența utilizatorului, a genera statistici, profiluri, marketing direct și remarketing, a crea recomandări speciale de promovare pentru Persoana Vizată și a le transmite Persoanei Vizate, și a utiliza datele obținute în acest context în orice conținut publicitar și material, și poate partaja aceste date cu părțile menționate mai jos.",
+    "H4": "Transferul Datelor Cu Caracter Personal",
+    "H4_P1": "www.reconditionareautocare.ro poate transfera datele cu caracter personal aparținând Persoanei Vizate și noile date obținute prin utilizarea acestor date cu caracter personal către terțe părți de care www.reconditionareautocare.ro beneficiază pentru a realiza scopurile specificate în această Politică de Confidențialitate, limitat la furnizarea serviciilor menționate.",
+    "H4_P2": "www.reconditionareautocare.ro poate partaja cu terțe părți, cum ar fi furnizori de servicii externalizate, furnizori de servicii de găzduire, firme de avocatură, companii de cercetare, centre de apeluri, inclusiv cei care trimit SMS-uri, pentru a îmbunătăți experiența Persoanei Vizate (inclusiv îmbunătățire și personalizare), pentru a asigura securitatea Persoanei Vizate, pentru a detecta utilizările frauduloase sau neautorizate, pentru a investiga evaluările operaționale, pentru a rezolva erorile legate de serviciile www.reconditionareautocare.ro și pentru a îndeplini oricare dintre scopurile din această Politică de Confidențialitate."
+  }
 }

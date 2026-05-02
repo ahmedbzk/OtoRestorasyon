@@ -31,26 +31,34 @@
             <div class="space-y-2">
               <label class="text-[11px] font-black text-gray-400 uppercase tracking-widest ml-2">{{ 'CONTACT.FORM_NAME' | translate }}</label>
               <input formControlName="name" type="text" [placeholder]="'CONTACT.FORM_PLACEHOLDER_NAME' | translate" 
-                     class="w-full px-6 py-4 bg-gray-50 border-2 border-transparent rounded-2xl text-sm focus:border-[#00adef] focus:bg-white outline-none transition-all shadow-inner">
+                     [ngClass]="{'!border-red-500': contactForm.get('name')?.invalid && (contactForm.get('name')?.dirty || contactForm.get('name')?.touched)}"
+                     class="w-full px-6 py-4 bg-gray-50 border-2 border-transparent rounded-2xl text-sm text-black focus:border-[#00adef] focus:bg-white outline-none transition-all shadow-inner">
+              <span *ngIf="contactForm.get('name')?.invalid && (contactForm.get('name')?.dirty || contactForm.get('name')?.touched)" class="text-xs text-red-500 ml-2 font-medium">{{ 'CONTACT.VAL_NAME' | translate }}</span>
             </div>
             <div class="space-y-2">
               <label class="text-[11px] font-black text-gray-400 uppercase tracking-widest ml-2">{{ 'CONTACT.FORM_EMAIL' | translate }}</label>
               <input formControlName="email" type="email" [placeholder]="'CONTACT.FORM_PLACEHOLDER_EMAIL' | translate" 
-                     class="w-full px-6 py-4 bg-gray-50 border-2 border-transparent rounded-2xl text-sm focus:border-[#00adef] focus:bg-white outline-none transition-all shadow-inner">
+                     [ngClass]="{'!border-red-500': contactForm.get('email')?.invalid && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)}"
+                     class="w-full px-6 py-4 bg-gray-50 border-2 border-transparent rounded-2xl text-sm text-black focus:border-[#00adef] focus:bg-white outline-none transition-all shadow-inner">
+              <span *ngIf="contactForm.get('email')?.invalid && (contactForm.get('email')?.dirty || contactForm.get('email')?.touched)" class="text-xs text-red-500 ml-2 font-medium">{{ 'CONTACT.VAL_EMAIL' | translate }}</span>
             </div>
           </div>
           <div class="space-y-2">
             <label class="text-[11px] font-black text-gray-400 uppercase tracking-widest ml-2">{{ 'CONTACT.FORM_SUBJECT' | translate }}</label>
             <input formControlName="subject" type="text" [placeholder]="'CONTACT.FORM_PLACEHOLDER_SUBJECT' | translate" 
-                   class="w-full px-6 py-4 bg-gray-50 border-2 border-transparent rounded-2xl text-sm focus:border-[#00adef] focus:bg-white outline-none transition-all shadow-inner">
+                   [ngClass]="{'!border-red-500': contactForm.get('subject')?.invalid && (contactForm.get('subject')?.dirty || contactForm.get('subject')?.touched)}"
+                   class="w-full px-6 py-4 bg-gray-50 border-2 border-transparent rounded-2xl text-sm text-black focus:border-[#00adef] focus:bg-white outline-none transition-all shadow-inner">
+            <span *ngIf="contactForm.get('subject')?.invalid && (contactForm.get('subject')?.dirty || contactForm.get('subject')?.touched)" class="text-xs text-red-500 ml-2 font-medium">{{ 'CONTACT.VAL_SUBJECT' | translate }}</span>
           </div>
           <div class="space-y-2">
             <label class="text-[11px] font-black text-gray-400 uppercase tracking-widest ml-2">{{ 'CONTACT.FORM_MESSAGE' | translate }}</label>
             <textarea formControlName="message" rows="5" [placeholder]="'CONTACT.FORM_PLACEHOLDER_MESSAGE' | translate" 
-                      class="w-full px-6 py-4 bg-gray-50 border-2 border-transparent rounded-2xl text-sm focus:border-[#00adef] focus:bg-white outline-none transition-all shadow-inner resize-none"></textarea>
+                      [ngClass]="{'!border-red-500': contactForm.get('message')?.invalid && (contactForm.get('message')?.dirty || contactForm.get('message')?.touched)}"
+                      class="w-full px-6 py-4 bg-gray-50 border-2 border-transparent rounded-2xl text-sm text-black focus:border-[#00adef] focus:bg-white outline-none transition-all shadow-inner resize-none"></textarea>
+            <span *ngIf="contactForm.get('message')?.invalid && (contactForm.get('message')?.dirty || contactForm.get('message')?.touched)" class="text-xs text-red-500 ml-2 font-medium">{{ 'CONTACT.VAL_MESSAGE' | translate }}</span>
           </div>
           
-          <button [disabled]="contactForm.invalid" class="w-full bg-black text-white font-black py-5 rounded-2xl text-xs uppercase tracking-[0.4em] hover:bg-[#ff0000] hover:shadow-[0_15px_30px_rgba(255,0,0,0.3)] disabled:opacity-30 transition-all active:scale-95">
+          <button [disabled]="contactForm.invalid" class="w-full bg-black text-white font-black py-5 rounded-2xl text-xs uppercase tracking-[0.4em] hover:bg-[#ff0000] hover:shadow-[0_15px_30px_rgba(255,0,0,0.3)] disabled:opacity-30 disabled:hover:bg-black disabled:hover:shadow-none transition-all active:scale-95">
             {{ 'CONTACT.FORM_SUBMIT' | translate }}
           </button>
         </form>
@@ -116,7 +124,7 @@
   </div>
 </section>
 
-<div *ngIf="showToast" class="fixed bottom-10 left-1/2 -translate-x-1/2 z-[100] animate-bounce-in">
+<div *ngIf="showToast" class="fixed top-24 right-10 z-[100] animate-bounce-in shadow-[0_0_50px_rgba(0,0,0,0.5)] rounded-2xl">
   <div [ngClass]="toastType === 'success' ? 'bg-[#25D366]' : 'bg-[#ff0000]'"
        class="flex items-center gap-4 px-8 py-4 rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.2)] text-white min-w-[320px]">
     <lucide-icon [name]="toastType === 'success' ? 'check-circle' : 'alert-circle'" size="24"></lucide-icon>

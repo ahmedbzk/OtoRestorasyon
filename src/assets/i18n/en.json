@@ -168,7 +168,11 @@
     "TOAST_SUCCESS_MSG": "Your Message Has Been Sent Successfully!",
     "TOAST_ERROR_HEAD": "ERROR",
     "TOAST_ERROR_MSG": "A problem occurred!",
-    "TOAST_CONN_ERROR": "Could Not Connect to Server!"
+    "TOAST_CONN_ERROR": "Could Not Connect to Server!",
+    "VAL_NAME": "* Required field (Min 3 characters)",
+    "VAL_EMAIL": "* Please enter a valid email",
+    "VAL_SUBJECT": "* Subject cannot be empty",
+    "VAL_MESSAGE": "* Message field is required (Min 10 characters)"
   },
   "VIP_DESIGN": {
     "SEGMENTS_TITLE": "DESIGN SEGMENTS",
@@ -225,21 +229,53 @@
     "STORAGE_FEAT_4": "Locked Compartment Options"
   },
   "SEO": {
-  "HOME_TITLE": "Home | VIP Design & Restoration",
-  "HOME_DESC": "Professional VIP design, bus design, and original spare parts solutions for your vehicles. At your service with 15 years of experience.",
-  "ABOUT_TITLE": "About Us | Specialists in VIP Vehicle Design and Restoration",
-  "ABOUT_DESC": "A leading company in car restoration and VIP vehicle design. Meet our expert team and high-quality craftsmanship.",
-  "MEDIA_TITLE": "Media Content | VIP Design & Restoration - Our Videos and Recent Projects",
-  "MEDIA_DESC": "Browse our VIP conversion and bus design project videos and our most up-to-date work here.",
-  "FAQ_TITLE": "F.A.Q | VIP Design & Restoration - Frequently Asked Questions",
-  "FAQ_DESC": "Answers to all the questions you have about the VIP vehicle design and restoration process and the original parts guarantee.",
-  "VIP_TITLE": "VIP Design | VIP Design & Restoration - Custom Luxury Vehicles",
-  "VIP_DESC": "Our VIP vehicle design segments offering luxury and comfort together. Recreate your vehicle with Luxury, Economy, and Commercial solutions.",
-  "BUS_TITLE": "Bus Design | VIP Design & Restoration - Modern Interior Solutions",
-  "BUS_DESC": "Multimedia systems, seat upholstery, and smart storage solutions for buses. Designed for comfortable journeys.",
-  "PARTS_TITLE": "Spare Parts | VIP Design & Restoration - Original Parts Components",
-  "PARTS_DESC": "Air components, mechanical parts, and accessory horn sets. Our catalog of the highest quality spare parts.",
-  "CONTACT_TITLE": "Contact | VIP Design & Restoration - Contact Us",
-  "CONTACT_DESC": "Our workshop address, phone numbers, and WhatsApp line. Get a quote now for your VIP design projects."
-}
+    "HOME_TITLE": "Home | VIP Design & Restoration",
+    "HOME_DESC": "Professional VIP design, bus design, and original spare parts solutions for your vehicles. At your service with 15 years of experience.",
+    "ABOUT_TITLE": "About Us | Specialists in VIP Vehicle Design and Restoration",
+    "ABOUT_DESC": "A leading company in car restoration and VIP vehicle design. Meet our expert team and high-quality craftsmanship.",
+    "MEDIA_TITLE": "Media Content | VIP Design & Restoration - Our Videos and Recent Projects",
+    "MEDIA_DESC": "Browse our VIP conversion and bus design project videos and our most up-to-date work here.",
+    "FAQ_TITLE": "F.A.Q | VIP Design & Restoration - Frequently Asked Questions",
+    "FAQ_DESC": "Answers to all the questions you have about the VIP vehicle design and restoration process and the original parts guarantee.",
+    "VIP_TITLE": "VIP Design | VIP Design & Restoration - Custom Luxury Vehicles",
+    "VIP_DESC": "Our VIP vehicle design segments offering luxury and comfort together. Recreate your vehicle with Luxury, Economy, and Commercial solutions.",
+    "BUS_TITLE": "Bus Design | VIP Design & Restoration - Modern Interior Solutions",
+    "BUS_DESC": "Multimedia systems, seat upholstery, and smart storage solutions for buses. Designed for comfortable journeys.",
+    "PARTS_TITLE": "Spare Parts | VIP Design & Restoration - Original Parts Components",
+    "PARTS_DESC": "Air components, mechanical parts, and accessory horn sets. Our catalog of the highest quality spare parts.",
+    "CONTACT_TITLE": "Contact | VIP Design & Restoration - Contact Us",
+    "CONTACT_DESC": "Our workshop address, phone numbers, and WhatsApp line. Get a quote now for your VIP design projects."
+  },
+  "NOT_FOUND": {
+    "TITLE": "404",
+    "HEADING": "PAGE NOT FOUND",
+    "MESSAGE": "The page you are looking for could not be found. It might be under restoration or you might have entered the wrong address.",
+    "BACK_BUTTON": "RETURN TO HOME",
+    "TITLE_SEO": "404 Page Not Found",
+    "DESC_SEO": "The page you are looking for could not be found."
+  },
+  "PRIVACY_POLICY": {
+    "TITLE_1": "PRIVACY",
+    "TITLE_2": "POLICY",
+    "P1": "As (www.reconditionareautocare.ro), we strive to protect the privacy of our members using our site in order to ensure that our users can safely and completely benefit from our services. Accordingly, this www.reconditionareautocare.ro Privacy Policy (“Policy”) has been prepared to process our members' personal data in full compliance with the Personal Data Protection Law No. 6698 (“Law”) and to inform our users in this context. The www.reconditionareautocare.ro cookie policy is an integral part of this Policy.",
+    "P2": "The purpose of this Policy is to determine the terms and conditions regarding the use of personal data shared with www.reconditionareautocare.ro by www.reconditionareautocare.ro members/visitors/users (collectively referred to as the “Data Subject”) during the operation of the www.reconditionareautocare.ro website and mobile application (collectively referred to as “www.reconditionareautocare.ro”) operated by www.reconditionareautocare.ro, or produced by www.reconditionareautocare.ro during the Data Subject's use of www.reconditionareautocare.ro.",
+    "H1": "What Data is Processed?",
+    "H1_P1": "The following lists the data processed by www.reconditionareautocare.ro and considered as personal data in accordance with the Law. Unless explicitly stated otherwise, the term 'personal data' under the terms and conditions provided in this Policy will include the information below.",
+    "L1": "• Identity Information",
+    "L2": "• Contact Information",
+    "L3": "• User Information",
+    "L4": "• User Transaction Information",
+    "L5": "• Transaction Security Information",
+    "L6": "• Financial Information",
+    "L7": "• Marketing Information",
+    "L8": "• Request/Complaint Management Information",
+    "H1_P2": "In accordance with Articles 3 and 7 of the Personal Data Protection Law, data that is irreversibly anonymized will not be considered as personal data under the provisions of the said law, and processing activities regarding such data will be carried out regardless of the provisions of this Policy.",
+    "H2": "Purposes of Processing Personal Data",
+    "H2_P1": "www.reconditionareautocare.ro will process personal data provided by the Data Subject to create a membership record and account and keep related records, to enable the Data Subject to benefit from the services provided via www.reconditionareautocare.ro, to detect system errors to track performance and improve the functioning of www.reconditionareautocare.ro, including for the purposes of providing maintenance and support services and backup services, to carry out necessary work by business units to benefit relevant persons from the products and services offered by www.reconditionareautocare.ro, to customize these products and services according to the tastes, usage habits, and needs of the relevant persons and recommend them, to plan and execute the necessary activities for this purpose, to carry out the commercial activities carried out by www.reconditionareautocare.ro by the relevant business units and execute related business processes, to ensure the legal, technical, and commercial-occupational safety of www.reconditionareautocare.ro and the persons with whom it has a business relationship, and to plan and execute www.reconditionareautocare.ro's commercial and/or business strategies.",
+    "H3": "Personal Data to be Processed in Accordance with the Explicit Consent of Data Subjects and Purposes of Processing",
+    "H3_P1": "Within the scope of the Data Subject's explicit consent, www.reconditionareautocare.ro may process data by tracking the Data Subjects' movements on www.reconditionareautocare.ro to increase user experience, generate statistics, profile, direct market and remarket, create special promotion recommendations for the Data Subject and forward them to the Data Subject, and use the data obtained in this context in any advertising and material content, and may share this data with the parties mentioned below.",
+    "H4": "Transfer of Personal Data",
+    "H4_P1": "www.reconditionareautocare.ro may transfer the personal data belonging to the Data Subject and the new data obtained by using these personal data to third parties from whom www.reconditionareautocare.ro benefits in order to realize the purposes specified in this Privacy Policy, limited to the provision of the said services.",
+    "H4_P2": "www.reconditionareautocare.ro may share with third parties such as outsourcing service providers, hosting service providers, law firms, research companies, call centers, including those who send SMS, to improve the Data Subject experience (including improvement and personalization), to ensure the security of the Data Subject, to detect fraudulent or unauthorized use, to investigate operational evaluations, to resolve errors related to www.reconditionareautocare.ro services and to fulfill any of the purposes in this Privacy Policy."
+  }
 }

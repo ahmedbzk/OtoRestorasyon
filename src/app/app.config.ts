@@ -24,7 +24,7 @@ export const appConfig: ApplicationConfig = {
     {
     provide: IMAGE_CONFIG,
     useValue: {
-      disableImageSizeWarning: true, // NG0913 uyarısını susturur
+      disableImageSizeWarning: true,
       disableImageLazyLoadWarning: true
     }
   },
